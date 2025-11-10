@@ -871,14 +871,20 @@ cc_prebuilt_library_shared {
     owner: "realme",
     vendor: true,
     multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"] },
-        lib64: { srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"] },
+        lib32: { 
+            srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"],
+            relative_install_path: "",  // ← ADD THIS
+        },
+        lib64: { 
+            srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"],
+            relative_install_path: "",  // ← ADD THIS
+        },
     },
     shared_libs: [
         "libhidlbase", "liblog", "libutils", "libcutils", "libc++",
     ],
     strip: { none: true },
-    check_elf_files: false,  // ← ADD THIS
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
