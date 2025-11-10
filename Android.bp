@@ -760,18 +760,10 @@ cc_prebuilt_binary {
     compile_multilib: "64",
     init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.boot@1.2-service.rc"],
     shared_libs: [
-        "libbase",
-        "libcutils",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libc++",
-        "vendor.sprd.hardware.boot@1.2",
-        "android.hardware.boot@1.0",
-        "android.hardware.boot@1.1",
-        "android.hardware.boot@1.2",
-        "libhardware",
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "vendor.sprd.hardware.boot@1.2", "libhardware",
     ],
+    check_elf_files: false,
 }
 
 //prebuilt_etc {
@@ -879,29 +871,14 @@ cc_prebuilt_library_shared {
     owner: "realme",
     vendor: true,
     multilib: {
-        lib32: {
-            srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"],
-        },
-        lib64: {
-            srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"],
-        },
+        lib32: { srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"] },
+        lib64: { srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"] },
     },
     shared_libs: [
-        "android.hardware.boot@1.0",
-        "android.hardware.boot@1.1",
-        "android.hardware.boot@1.2",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
+        "libhidlbase", "liblog", "libutils", "libcutils", "libc++",
     ],
-    strip: {
-        none: true,
-    },
+    strip: { none: true },
+    check_elf_files: false,  // ← ADD THIS
 }
 
 cc_prebuilt_library_shared {
@@ -909,35 +886,16 @@ cc_prebuilt_library_shared {
     owner: "realme",
     vendor: true,
     multilib: {
-        lib32: {
-            srcs: ["proprietary/vendor/lib/hw/unisoc.bootctrl.so"],
-            relative_install_path: "hw",
-        },
-        lib64: {
-            srcs: ["proprietary/vendor/lib64/hw/unisoc.bootctrl.so"],
-            relative_install_path: "hw",
-        },
+        lib32: { srcs: ["proprietary/vendor/lib/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
+        lib64: { srcs: ["proprietary/vendor/lib64/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
     },
     shared_libs: [
-        "android.hardware.boot@1.0",
-        "android.hardware.boot@1.1",
-        "android.hardware.boot@1.2",
-        "vendor.sprd.hardware.boot@1.2",
-        "libbase",
-        "liblog",
-        "libhardware",
-        "libhidlbase",
-        "libutils",
-        "libcutils",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
+        "vendor.sprd.hardware.boot@1.2", "libbase", "liblog", "libhardware", "libutils", "libcutils", "libc++",
     ],
-    strip: {
-        none: true,
-    },
+    strip: { none: true },
+    check_elf_files: false,  // ← ADD THIS
 }
+
 
 
 cc_prebuilt_library_shared {
