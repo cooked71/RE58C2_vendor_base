@@ -1093,45 +1093,7 @@ cc_prebuilt_library_shared {
 // Core Libraries Stack
 // =============================================
 
-cc_prebuilt_library_shared {
-    name: "libcredstore_aidl",
-    owner: "realme",
-    srcs: ["proprietary/system/lib64/libcredstore_aidl.so"],
-    compile_multilib: "64",
-    shared_libs: [
-        "libbase",
-        "libbinder",
-        "libcrypto",
-        "libcutils", 
-        "liblog",
-        "libutils",
-        "libc++",
-    ],
-    strip: {
-        none: true,
-    },
-}
 
-cc_prebuilt_library_shared {
-    name: "libhardware_legacy",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: {
-            srcs: ["proprietary/system/lib/libhardware_legacy.so"],
-        },
-        lib64: {
-            srcs: ["proprietary/system/lib64/libhardware_legacy.so"],
-        },
-    },
-    shared_libs: [
-        "libc++",
-        "liblog", 
-        "libcutils",
-        "libutils",
-    ],
-    check_elf_files: false,
-}
 
 cc_prebuilt_library_shared {
     name: "libnetutils",
@@ -1657,9 +1619,10 @@ cc_prebuilt_binary {
         "libutils",
         "libc++",
         "libhardware",
-        "libhardware_legacy",
         "libbinder",
     ],
+        check_elf_files: false,
+
 }
 
 cc_prebuilt_binary {
@@ -2077,7 +2040,6 @@ cc_prebuilt_library_shared {
         "liblog",
         "libutils",
         "libcutils",
-        "libhardware_legacy",
         "librilutils",
         "libhidlbase",
         "libhwbinder",
@@ -2109,6 +2071,8 @@ cc_prebuilt_library_shared {
         "libm",
         "libdl",
     ],
+        check_elf_files: false,
+
     strip: {
         none: true,
     },
