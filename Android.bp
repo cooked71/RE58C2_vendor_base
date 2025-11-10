@@ -3742,13 +3742,13 @@ prebuilt_etc {
     sub_dir: "etc",
 }
 
-prebuilt_etc {
-    name: "fs_config_dirs",
-    owner: "realme",
-    src: "proprietary/vendor_dlkm/etc/fs_config_dirs",
-    vendor: true,
-    sub_dir: "etc",
-}
+//prebuilt_etc {
+//    name: "fs_config_dirs",
+//    owner: "realme",
+//    src: "proprietary/vendor_dlkm/etc/fs_config_dirs",
+//    vendor: true,
+//    sub_dir: "etc",
+// }
 
 prebuilt_etc {
     name: "fs_config_files",
