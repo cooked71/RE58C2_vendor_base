@@ -350,7 +350,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/odm/etc/otpdata/spw_input_parameters_values_planar.txt:$(TARGET_COPY_OUT_ODM)/etc/otpdata/spw_input_parameters_values_planar.txt \
     vendor/realme/RE58C2/proprietary/odm/etc/sensor_config.xml:$(TARGET_COPY_OUT_ODM)/etc/sensor_config.xml \
     vendor/realme/RE58C2/proprietary/odm/etc/unipnp/UniFeature.xml:$(TARGET_COPY_OUT_ODM)/etc/unipnp/UniFeature.xml \
-    vendor/realme/RE58C2/proprietary/odm/etc/vintf/manifest_nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_nfc.xml \
     vendor/realme/RE58C2/proprietary/odm/etc/wifi_board_config.ini:$(TARGET_COPY_OUT_ODM)/etc/wifi_board_config.ini \
     vendor/realme/RE58C2/proprietary/odm/etc/wifi_board_config_aa.ini:$(TARGET_COPY_OUT_ODM)/etc/wifi_board_config_aa.ini \
     vendor/realme/RE58C2/proprietary/odm/etc/wifi_board_config_hulk.ini:$(TARGET_COPY_OUT_ODM)/etc/wifi_board_config_hulk.ini \
