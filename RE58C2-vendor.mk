@@ -3377,50 +3377,112 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/usr/keylayout/adaptive_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/adaptive_ts.kl \
     vendor/realme/RE58C2/proprietary/vendor/usr/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+# =============================================
+# VENDOR APPS & SYSTEM APPS
+# =============================================
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
     UASetting \
     SoterService \
-    ims \
-    androidx.camera.extensions.impl \
-    ai_engine-default \
+    ims
+
+# =============================================
+# FRAMEWORK & LIBRARIES
+# =============================================
+PRODUCT_PACKAGES += \
+    androidx.camera.extensions.impl
+
+# =============================================
+# AI & MACHINE LEARNING
+# =============================================
+PRODUCT_PACKAGES += \
+    ai_engine-default
+
+# =============================================
+# BIOMETRICS & SECURITY
+# =============================================
+PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
+    android.hardware.gatekeeper@1.0-service.trusty \
+    android.hardware.security.keymint@2.0-unisoc.service.trusty \
+    face-default \
+    vendor-fingerprintmmi-default
+
+# =============================================
+# DRM & MEDIA
+# =============================================
+PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service \
     android.hardware.drm-service.clearkey \
-    android.hardware.gatekeeper@1.0-service.trusty \
-    android.hardware.health-service.example \
-    android.hardware.security.keymint@2.0-unisoc.service.trusty \
-    android.hardware.sensors-multihal \
+    manifest_android.hardware.drm-service.widevine \
+    manifest_media_c2_V1_1_unisoc
+
+# =============================================
+# POWER MANAGEMENT
+# =============================================
+PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service \
-    android.hardware.usb-service.example \
+    power.stats-default \
+    vendor-power-default
+
+# =============================================
+# SENSORS & INPUT
+# =============================================
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-multihal \
+    lights \
+    memtrack \
+    vibrator
+
+# =============================================
+# CONNECTIVITY (WIFI/BT/RADIO)
+# =============================================
+PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd \
     android.hardware.wifi.supplicant \
     android.hardware.wifi@1.0-service \
     bluetooth_audio \
-    cplog_svc-default \
-    enhance-default \
-    face-default \
-    hdcp-default \
-    lights \
-    manifest_android.hardware.drm-service.widevine \
-    manifest_dualsim \
-    manifest_media_c2_V1_1_unisoc \
-    manifest_oplus_performance \
-    memtrack \
     network-default \
-    power.stats-default \
-    rebootescrow-default \
-    soter_default \
-    trusty-default \
-    tui-default \
-    vendor-fingerprintmmi-default \
-    vendor-log-default \
-    vendor-oemlock-default \
-    vendor-power-default \
+    manifest_dualsim
+
+# =============================================
+# USB & PERIPHERALS
+# =============================================
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.example
+
+# =============================================
+# VENDOR-SPECIFIC SPRD SERVICES
+# =============================================
+PRODUCT_PACKAGES += \
     vendor.sprd.hardware.boot@1.2 \
     vendor.sprd.hardware.commondcs@1.0-service \
     vendor.sprd.hardware.gnss@2.2-service \
-    vendor.sprd.hardware.thermal@2.0-service \
-    vibrator \
+    vendor.sprd.hardware.thermal@2.0-service
+
+# =============================================
+# ENHANCEMENT & PERFORMANCE SERVICES
+# =============================================
+PRODUCT_PACKAGES += \
+    cplog_svc-default \
+    enhance-default \
+    hdcp-default \
+    manifest_oplus_performance \
+    rebootescrow-default
+
+# =============================================
+# SECURITY & TRUSTZONE SERVICES
+# =============================================
+PRODUCT_PACKAGES += \
+    soter_default \
+    trusty-default \
+    tui-default \
+    vendor-log-default \
+    vendor-oemlock-default
+
+# =============================================
+# KERNEL & LOW-LEVEL
+# =============================================
+PRODUCT_PACKAGES += \
     manifest_kernel
