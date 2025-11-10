@@ -428,9 +428,6 @@ prebuilt_etc_xml {
 	device_specific: true,
 }
 
-soong_namespace {
-    imports: [],
-}
 
 // =============================================
 // BOOT HAL (A/B UPDATES) - CRITICAL
@@ -569,6 +566,180 @@ cc_prebuilt_binary {
     vendor: true,
     compile_multilib: "64",
     init_rc: ["proprietary/vendor/etc/init/android.hardware.health-service.example.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+    ],
+    check_elf_files: false,
+}
+// =============================================
+// MISSING BINARY MODULES - ADD THESE
+// =============================================
+
+// Biometrics Fingerprint Service
+cc_prebuilt_binary {
+    name: "android.hardware.biometrics.fingerprint@2.1-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.biometrics.fingerprint@2.1",
+    ],
+    check_elf_files: false,
+}
+
+// CAS Service
+cc_prebuilt_binary {
+    name: "android.hardware.cas@1.2-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.cas@1.2-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.cas@1.2-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.cas@1.2",
+    ],
+    check_elf_files: false,
+}
+
+// Gatekeeper Service
+cc_prebuilt_binary {
+    name: "android.hardware.gatekeeper@1.0-service.trusty",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service.trusty"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.trusty.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.gatekeeper@1.0",
+    ],
+    check_elf_files: false,
+}
+
+// KeyMint Service
+cc_prebuilt_binary {
+    name: "android.hardware.security.keymint@2.0-unisoc.service.trusty",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.security.keymint@2.0-unisoc.service.trusty"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.security.keymint@2.0-unisoc.service.trusty.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.security.keymint@2.0",
+    ],
+    check_elf_files: false,
+}
+
+// Sensors Service (Note: actual binary name is different)
+cc_prebuilt_binary {
+    name: "android.hardware.sensors-service.multihal",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.sensors-service.multihal.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.sensors@2.1",
+    ],
+    check_elf_files: false,
+}
+
+// WiFi Service
+cc_prebuilt_binary {
+    name: "android.hardware.wifi@1.0-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "android.hardware.wifi@1.0",
+    ],
+    check_elf_files: false,
+}
+
+// Vendor SPRD Services
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.commondcs@1.0-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.commondcs@1.0-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.commondcs@1.0-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "vendor.sprd.hardware.commondcs@1.0",
+    ],
+    check_elf_files: false,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.gnss@2.2-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.gnss@2.2-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.gnss@2.2-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "vendor.sprd.hardware.gnss@2.2",
+    ],
+    check_elf_files: false,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.thermal@2.0-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.thermal@2.0-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.thermal@2.0-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "vendor.sprd.hardware.thermal@2.0",
+    ],
+    check_elf_files: false,
+}
+
+// Additional SPRD services found
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.face-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.biometrics.face-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/face-default.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+    ],
+    check_elf_files: false,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.fingerprintmmi-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.fingerprintmmi-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/vendor-fingerprintmmi-default.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
     ],
