@@ -443,7 +443,6 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.boot@1.2-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++", "libhardware",
-        // REMOVED: "vendor.sprd.hardware.boot@1.2" - no build-time dependency
     ],
     check_elf_files: false,
 }
@@ -455,11 +454,11 @@ cc_prebuilt_library_shared {
     multilib: {
         lib32: { 
             srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",  // General lib directory
+            relative_install_path: "",
         },
         lib64: { 
             srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",  // General lib directory
+            relative_install_path: "",
         },
     },
     shared_libs: [
@@ -479,7 +478,6 @@ cc_prebuilt_library_shared {
     },
     shared_libs: [
         "libbase", "liblog", "libhardware", "libutils", "libcutils", "libc++",
-        // REMOVED: "vendor.sprd.hardware.boot@1.2" - no build-time dependency
     ],
     strip: { none: true },
     check_elf_files: false,
@@ -496,12 +494,8 @@ cc_prebuilt_library_shared {
     multilib: {
         lib32: { srcs: ["proprietary/vendor/lib/egl/libGLES_mali.so"], relative_install_path: "egl" },
         lib64: { srcs: ["proprietary/vendor/lib64/egl/libGLES_mali.so"], relative_install_path: "egl" },
-    },
-    shared_libs: [
-        "liblog", "libcutils", "libutils", "libsync", "libc++",
     ],
     check_elf_files: false,
-
 }
 
 cc_prebuilt_library_shared {
@@ -512,10 +506,7 @@ cc_prebuilt_library_shared {
         lib32: { srcs: ["proprietary/vendor/lib/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
         lib64: { srcs: ["proprietary/vendor/lib64/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
     },
-    shared_libs: [
-        "liblog", "libcutils", "libutils", "libsync", "libc++", "libhardware",
-    ],
-	check_elf_files: false,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -526,10 +517,7 @@ cc_prebuilt_library_shared {
         lib32: { srcs: ["proprietary/vendor/lib/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
         lib64: { srcs: ["proprietary/vendor/lib64/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
     },
-    shared_libs: [
-        "liblog", "libcutils", "libutils", "libsync", "libc++",
-    ],
-	 check_elf_files: false,
+    check_elf_files: false,
 }
 
 // =============================================
@@ -545,7 +533,7 @@ cc_prebuilt_binary {
     compile_multilib: "64",
     init_rc: ["proprietary/vendor/etc/init/unisoc.rild.rc"],
     shared_libs: [
-        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++", "librilcore",
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
     ],
     check_elf_files: false,
 }
@@ -558,12 +546,8 @@ cc_prebuilt_library_shared {
         lib32: { srcs: ["proprietary/vendor/lib/librilcore.so"] },
         lib64: { srcs: ["proprietary/vendor/lib64/librilcore.so"] },
     },
-    shared_libs: [
-        "libc++", "liblog", "libutils", "libcutils", "libhardware_legacy",
-    ],
     strip: { none: true },
-	check_elf_files: false,
-
+    check_elf_files: false,
 }
 
 // =============================================
@@ -583,11 +567,11 @@ cc_prebuilt_binary {
     ],
     check_elf_files: false,
 }
+
 // =============================================
-// MISSING BINARY MODULES - ADD THESE
+// MISSING BINARY MODULES - CLEANED
 // =============================================
 
-// Biometrics Fingerprint Service
 cc_prebuilt_binary {
     name: "android.hardware.biometrics.fingerprint@2.1-service",
     owner: "realme",
@@ -598,12 +582,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.biometrics.fingerprint@2.1",
     ],
     check_elf_files: false,
 }
 
-// CAS Service
 cc_prebuilt_binary {
     name: "android.hardware.cas@1.2-service",
     owner: "realme",
@@ -614,12 +596,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.cas@1.2-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.cas@1.2",
     ],
     check_elf_files: false,
 }
 
-// Gatekeeper Service
 cc_prebuilt_binary {
     name: "android.hardware.gatekeeper@1.0-service.trusty",
     owner: "realme",
@@ -630,12 +610,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.trusty.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.gatekeeper@1.0",
     ],
     check_elf_files: false,
 }
 
-// KeyMint Service
 cc_prebuilt_binary {
     name: "android.hardware.security.keymint@2.0-unisoc.service.trusty",
     owner: "realme",
@@ -646,12 +624,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.security.keymint@2.0-unisoc.service.trusty.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.security.keymint@2.0",
     ],
     check_elf_files: false,
 }
 
-// Sensors Service (Note: actual binary name is different)
 cc_prebuilt_binary {
     name: "android.hardware.sensors-service.multihal",
     owner: "realme",
@@ -662,12 +638,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.sensors-service.multihal.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.sensors@2.1",
     ],
     check_elf_files: false,
 }
 
-// WiFi Service
 cc_prebuilt_binary {
     name: "android.hardware.wifi@1.0-service",
     owner: "realme",
@@ -678,12 +652,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "android.hardware.wifi@1.0",
     ],
     check_elf_files: false,
 }
 
-// Vendor SPRD Services
 cc_prebuilt_binary {
     name: "vendor.sprd.hardware.commondcs@1.0-service",
     owner: "realme",
@@ -694,7 +666,6 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.commondcs@1.0-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "vendor.sprd.hardware.commondcs@1.0",
     ],
     check_elf_files: false,
 }
@@ -709,7 +680,6 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.gnss@2.2-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "vendor.sprd.hardware.gnss@2.2",
     ],
     check_elf_files: false,
 }
@@ -724,12 +694,10 @@ cc_prebuilt_binary {
     init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.thermal@2.0-service.rc"],
     shared_libs: [
         "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-        "vendor.sprd.hardware.thermal@2.0",
     ],
     check_elf_files: false,
 }
 
-// Additional SPRD services found
 cc_prebuilt_binary {
     name: "vendor.sprd.hardware.face-service",
     owner: "realme",
