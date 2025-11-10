@@ -873,11 +873,11 @@ cc_prebuilt_library_shared {
     multilib: {
         lib32: { 
             srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",  // ← ADD THIS
+            relative_install_path: "",  // ← General lib directory
         },
         lib64: { 
             srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",  // ← ADD THIS
+            relative_install_path: "",  // ← General lib directory
         },
     },
     shared_libs: [
@@ -896,12 +896,12 @@ cc_prebuilt_library_shared {
         lib64: { srcs: ["proprietary/vendor/lib64/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
     },
     shared_libs: [
-        "vendor.sprd.hardware.boot@1.2", "libbase", "liblog", "libhardware", "libutils", "libcutils", "libc++",
+        "libbase", "liblog", "libhardware", "libutils", "libcutils", "libc++",
+        // REMOVED: "vendor.sprd.hardware.boot@1.2" - no build-time dependency
     ],
     strip: { none: true },
-    check_elf_files: false,  // ← ADD THIS
+    check_elf_files: false,
 }
-
 
 
 cc_prebuilt_library_shared {
