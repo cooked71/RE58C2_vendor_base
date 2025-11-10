@@ -428,3 +428,149 @@ prebuilt_etc_xml {
 	device_specific: true,
 }
 
+soong_namespace {
+    imports: [],
+}
+
+// =============================================
+// BOOT HAL (A/B UPDATES) - CRITICAL
+// =============================================
+
+cc_prebuilt_binary {
+    name: "vendor.sprd.hardware.boot@1.2-service",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/vendor.sprd.hardware.boot@1.2-service"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/vendor.sprd.hardware.boot@1.2-service.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+        "vendor.sprd.hardware.boot@1.2", "android.hardware.boot@1.0",
+        "android.hardware.boot@1.1", "android.hardware.boot@1.2", "libhardware",
+    ],
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.sprd.hardware.boot@1.2",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"] },
+        lib64: { srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"] },
+    },
+    shared_libs: [
+        "android.hardware.boot@1.0", "android.hardware.boot@1.1", "android.hardware.boot@1.2",
+        "libhidlbase", "liblog", "libutils", "libcutils", "libc++",
+    ],
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "unisoc.bootctrl",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
+        lib64: { srcs: ["proprietary/vendor/lib64/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
+    },
+    shared_libs: [
+        "android.hardware.boot@1.0", "android.hardware.boot@1.1", "android.hardware.boot@1.2",
+        "vendor.sprd.hardware.boot@1.2", "libbase", "liblog", "libhardware",
+    ],
+    strip: { none: true },
+}
+
+// =============================================
+// GRAPHICS - ESSENTIAL
+// =============================================
+
+cc_prebuilt_library_shared {
+    name: "libGLES_mali",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/egl/libGLES_mali.so"], relative_install_path: "egl" },
+        lib64: { srcs: ["proprietary/vendor/lib64/egl/libGLES_mali.so"], relative_install_path: "egl" },
+    },
+    shared_libs: [
+        "liblog", "libcutils", "libutils", "libsync", "libc++",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "hwcomposer.unisoc",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
+        lib64: { srcs: ["proprietary/vendor/lib64/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
+    },
+    shared_libs: [
+        "liblog", "libcutils", "libutils", "libsync", "libc++", "libhardware",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "gralloc.default.vendor",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
+        lib64: { srcs: ["proprietary/vendor/lib64/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
+    },
+    shared_libs: [
+        "liblog", "libcutils", "libutils", "libsync", "libc++",
+    ],
+}
+
+// =============================================
+// RIL/TELEPHONY - ESSENTIAL
+// =============================================
+
+cc_prebuilt_binary {
+    name: "urild",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/urild"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/unisoc.rild.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++", "librilcore",
+    ],
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "librilcore",
+    owner: "realme",
+    vendor: true,
+    multilib: {
+        lib32: { srcs: ["proprietary/vendor/lib/librilcore.so"] },
+        lib64: { srcs: ["proprietary/vendor/lib64/librilcore.so"] },
+    },
+    shared_libs: [
+        "libc++", "liblog", "libutils", "libcutils", "libhardware_legacy",
+    ],
+    strip: { none: true },
+}
+
+// =============================================
+// HEALTH HAL
+// =============================================
+
+cc_prebuilt_binary {
+    name: "android.hardware.health-service.example",
+    owner: "realme",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.health-service.example"],
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "64",
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.health-service.example.rc"],
+    shared_libs: [
+        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
+    ],
+    check_elf_files: false,
+}
