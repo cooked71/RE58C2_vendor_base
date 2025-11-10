@@ -827,25 +827,6 @@ cc_prebuilt_binary {
 //     ],
 //  }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.boot@1.0-impl-1.2",
-    owner: "realme",
-    vendor: true,
-    check_elf_files: false,
-    multilib: {
-        lib32: {
-            srcs: ["proprietary/vendor/lib/hw/android.hardware.boot@1.0-impl-1.2.so"],
-            relative_install_path: "hw",
-        },
-        lib64: {
-            srcs: ["proprietary/vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2.so"],
-            relative_install_path: "hw",
-        },
-    },
-    strip: {
-        none: true,
-    },
-}
 
 cc_prebuilt_library_shared {
     name: "bootctrl.default",
