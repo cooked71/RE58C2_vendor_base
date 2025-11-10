@@ -448,21 +448,3 @@ cc_prebuilt_binary {
 }
 
 
-// =============================================
-// HEALTH HAL
-// =============================================
-
-cc_prebuilt_binary {
-    name: "android.hardware.health-service.example",
-    owner: "realme",
-    srcs: ["proprietary/vendor/bin/hw/android.hardware.health-service.example"],
-    relative_install_path: "hw",
-    vendor: true,
-    compile_multilib: "64",
-    init_rc: ["proprietary/vendor/etc/init/android.hardware.health-service.example.rc"],
-    shared_libs: [
-        "libbase", "libcutils", "libhidlbase", "liblog", "libutils", "libc++",
-    ],
-    check_elf_files: false,
-}
-
