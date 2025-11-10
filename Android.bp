@@ -447,78 +447,12 @@ cc_prebuilt_binary {
     check_elf_files: false,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.sprd.hardware.boot@1.2",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { 
-            srcs: ["proprietary/vendor/lib/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",
-        },
-        lib64: { 
-            srcs: ["proprietary/vendor/lib64/vendor.sprd.hardware.boot@1.2.so"],
-            relative_install_path: "",
-        },
-    },
-    shared_libs: [
-        "libhidlbase", "liblog", "libutils", "libcutils", "libc++",
-    ],
-    strip: { none: true },
-    check_elf_files: false,
-}
 
-cc_prebuilt_library_shared {
-    name: "unisoc.bootctrl",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
-        lib64: { srcs: ["proprietary/vendor/lib64/hw/unisoc.bootctrl.so"], relative_install_path: "hw" },
-    },
-    shared_libs: [
-        "libbase", "liblog", "libhardware", "libutils", "libcutils", "libc++",
-    ],
-    strip: { none: true },
-    check_elf_files: false,
-}
 
-// =============================================
-// GRAPHICS - ESSENTIAL
-// =============================================
 
-cc_prebuilt_library_shared {
-    name: "libGLES_mali",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/egl/libGLES_mali.so"], relative_install_path: "egl" },
-        lib64: { srcs: ["proprietary/vendor/lib64/egl/libGLES_mali.so"], relative_install_path: "egl" },
-    },  
-    check_elf_files: false,
-}
 
-cc_prebuilt_library_shared {
-    name: "hwcomposer.unisoc",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
-        lib64: { srcs: ["proprietary/vendor/lib64/hw/hwcomposer.unisoc.so"], relative_install_path: "hw" },
-    },
-    check_elf_files: false,
-}
 
-cc_prebuilt_library_shared {
-    name: "gralloc.default.vendor",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
-        lib64: { srcs: ["proprietary/vendor/lib64/hw/gralloc.RE58C2.so"], relative_install_path: "hw" },
-    },
-    check_elf_files: false,
-}
+
 
 // =============================================
 // RIL/TELEPHONY - ESSENTIAL
@@ -538,17 +472,6 @@ cc_prebuilt_binary {
     check_elf_files: false,
 }
 
-cc_prebuilt_library_shared {
-    name: "librilcore",
-    owner: "realme",
-    vendor: true,
-    multilib: {
-        lib32: { srcs: ["proprietary/vendor/lib/librilcore.so"] },
-        lib64: { srcs: ["proprietary/vendor/lib64/librilcore.so"] },
-    },
-    strip: { none: true },
-    check_elf_files: false,
-}
 
 // =============================================
 // HEALTH HAL
