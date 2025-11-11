@@ -3383,7 +3383,7 @@ PRODUCT_COPY_FILES += \
 # FORCE COPY MODULES IN VENDOR
 # =============================================
 
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/modules/aes-ce-ccm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/aes-ce-ccm.ko \
     vendor/realme/RE58C2/proprietary/vendor/lib/modules/aes-neon-blk.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/aes-neon-blk.ko \
     vendor/realme/RE58C2/proprietary/vendor/lib/modules/agdsp_access.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/agdsp_access.ko \
