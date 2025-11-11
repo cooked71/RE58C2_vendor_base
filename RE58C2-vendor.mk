@@ -3384,6 +3384,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/vendor_dlkm/lib,vendor_dlkm/lib)
+# Use separate directory to avoid any conflicts
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor_dlkm/lib/modules/:vendor/lib/modules/
+
+# Then update init.insmod.sh to look in both locations
 
 
 # =============================================
