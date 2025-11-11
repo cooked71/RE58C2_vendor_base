@@ -3377,6 +3377,15 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/usr/keylayout/adaptive_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/adaptive_ts.kl \
     vendor/realme/RE58C2/proprietary/vendor/usr/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+
+# =============================================
+# COPY MODULES IN VENDOR_DLKM
+# =============================================
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/vendor_dlkm/lib,vendor_dlkm/lib)
+
+
 # =============================================
 # VENDOR APPS & SYSTEM APPS
 # =============================================
