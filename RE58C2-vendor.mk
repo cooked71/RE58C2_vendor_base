@@ -3409,6 +3409,10 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/bin/vndservicemanager:$(TARGET_COPY_OUT_VENDOR)/bin/vndservicemanager \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vndservicemanager.rc
 
+# Fix libmediahdrtosdrtransform location - copy from vendor to system
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
 
 
 
