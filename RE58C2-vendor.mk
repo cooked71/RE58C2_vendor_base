@@ -3405,6 +3405,13 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/vendor_dlkm/lib,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib)
 # Use separate directory to avoid any conflicts
 
+# vndservicemanager
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/bin/vndservicemanager:$(TARGET_COPY_OUT_VENDOR)/bin/vndservicemanager \
+    vendor/realme/RE58C2/proprietary/vendor/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vndservicemanager.rc
+
+
+
 
 # =============================================
 # VENDOR APPS & SYSTEM APPS
