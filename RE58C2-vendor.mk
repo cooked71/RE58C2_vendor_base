@@ -3389,11 +3389,18 @@ PRODUCT_COPY_FILES += \
  PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwbinder.so \
 
-# System library needed for Zygote and media services
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
 
+# Critical missing libraries
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
+
+# Missing HIDL libraries
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.radio@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.2.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@2.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1.so
 
 
 # =============================================
