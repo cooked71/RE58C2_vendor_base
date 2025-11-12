@@ -3379,138 +3379,23 @@ PRODUCT_COPY_FILES += \
 
 
 
-# =============================================
-# FORCE COPY MODULES IN VENDOR
-# =============================================
+# Missing HIDL libraries for vendor services
+PRODUCT_COPY_FILES += \
+    # 64-bit libraries
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.broadcastradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.broadcastradio@2.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidltransport.so \
+    # 32-bit libraries
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwbinder.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidltransport.so
 
-# PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/aes-ce-ccm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/aes-ce-ccm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/aes-neon-blk.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/aes-neon-blk.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/agdsp_access.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/agdsp_access.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/apsys-dvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/apsys-dvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/arc4.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/arc4.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/asix.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/asix.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/audio-dsp-dump.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio-dsp-dump.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/audio_mem.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_mem.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/audio-pipe.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio-pipe.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/audio_sipc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_sipc.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ax88179_178a.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ax88179_178a.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/chipone-tddi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/chipone-tddi.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/core.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/core.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/cpufreq_userspace.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/cpufreq_userspace.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/device_info.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/device_info.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/extcon-usb-gpio.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/extcon-usb-gpio.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/flash_ic_ocp8137.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/flash_ic_ocp8137.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/flash_ic_sgm3785.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/flash_ic_sgm3785.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/focaltech_ft8756_spi_ts.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/focaltech_ft8756_spi_ts.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/focaltech_tp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/focaltech_tp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ghash-ce.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ghash-ce.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/gnss_common_ctl_all.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/gnss_common_ctl_all.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/gnss_dbg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/gnss_dbg.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/gnss_pmnotify_ctl.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/gnss_pmnotify_ctl.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/gpio.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/gpio.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/hardware_info.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/hardware_info.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/himax_mmi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/himax_mmi.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/hung_task_enhance.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/hung_task_enhance.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/hyb.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/hyb.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ims_bridge.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ims_bridge.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/modules/init.insmod.cfg \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ion_cma_heap.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ion_cma_heap.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ion_ipc_trusty.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ion_ipc_trusty.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/jiiov_fp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/jiiov_fp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/jpg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/jpg.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/lcd_bias_adjust.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/lcd_bias_adjust.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/leds-sc27xx-bltc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/leds-sc27xx-bltc.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/ledtrig-pattern.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/ledtrig-pattern.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/mali_kbase.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mali_kbase.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/mcdt_hw_r2p0.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mcdt_hw_r2p0.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/mipi_driver.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mipi_driver.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/misc_sprd_uid.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/misc_sprd_uid.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/mmdvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mmdvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.load.cali:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load.cali \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.load.charger:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load.charger \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/musb_hdrc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/musb_hdrc.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/musb_sprd.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/musb_sprd.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/nq-nci.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/nq-nci.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/nvt_nt36xxx_spi_ts.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/nvt_nt36xxx_spi_ts.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/omnivision_tcm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/omnivision_tcm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/oplus_chg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/oplus_chg.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/op_rf_cable_monitor.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/op_rf_cable_monitor.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/phy-sprd-qogirl6.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/phy-sprd-qogirl6.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/pinctrl.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pinctrl.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/pinctrl-sprd.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pinctrl-sprd.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/pinctrl-sprd-qogirl6.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pinctrl-sprd-qogirl6.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/pwm-sprd.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pwm-sprd.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/rtc-sc27xx.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rtc-sc27xx.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx_adc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx_adc.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx_fuel_gauge.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx_fuel_gauge.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx-poweroff.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx-poweroff.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx_tsensor_thermal.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx_tsensor_thermal.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx_typec.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx_typec.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sc27xx-vibra.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sc27xx-vibra.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sha1-ce.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sha1-ce.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sipa.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sipa.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sipa-tuning.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sipa-tuning.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-card.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-card.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-codec-sc2730.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-codec-sc2730.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-codec-sc2730-power-dev.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-codec-sc2730-power-dev.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-codec-sc2730-power.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-codec-sc2730-power.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-dummy-codec.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-dummy-codec.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-pa-ucp1301.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-pa-ucp1301.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-pdm-r2p0.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-pdm-r2p0.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-vbc-fe.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-vbc-fe.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/snd-soc-sprd-vbc-v4.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/snd-soc-sprd-vbc-v4.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/spi-sprd.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/spi-sprd.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_apipe.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_apipe.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_audcp_boot.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_audcp_boot.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_audcp_dvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_audcp_dvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprdbt_tty.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprdbt_tty.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_camera.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_camera.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_camsys_pw_domain.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_camsys_pw_domain.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-compr-2stage-dma.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-compr-2stage-dma.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_cp_dvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_cp_dvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_cpp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_cpp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_cpu_cooling.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_cpu_cooling.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_ddr_dvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_ddr_dvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-dmaengine-pcm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-dmaengine-pcm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-dma.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-dma.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-drm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-drm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_flash_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_flash_drv.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_fm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_fm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_gpu_cooling.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_gpu_cooling.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-gsp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-gsp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-ion.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-ion.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_map.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_map.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_mipi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_mipi.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-platform-pcm-routing.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-platform-pcm-routing.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_pmic_refout.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_pmic_refout.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_pmic_syscon.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_pmic_syscon.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_pmic_wdt.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_pmic_wdt.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_sensor.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_sensor.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_soc_id.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_soc_id.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_soc_thm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_soc_thm.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_thermal.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_thermal.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-top-dvfs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-top-dvfs.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_u_ether.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_u_ether.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_usb_f_rndis.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_usb_f_rndis.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_usbpinmux_qogirl6.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_usbpinmux_qogirl6.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd-vsp-pw-domain.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd-vsp-pw-domain.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_wdf.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_wdf.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/sprd_wlan_combo.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/sprd_wlan_combo.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/thermal-generic-adc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/thermal-generic-adc.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/trusty-tui.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/trusty-tui.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/twofish_common.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/twofish_common.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/twofish_generic.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/twofish_generic.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/unisoc-iommu.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/unisoc-iommu.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/virt-dma.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/virt-dma.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/vsp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/vsp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/wcn_bsp.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wcn_bsp.ko \
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/zram.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/zram.ko\
-    vendor/realme/RE58C2/proprietary/vendor/lib/modules/zsmalloc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/zsmalloc.ko
+# System library needed for Zygote and media services
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
 
 
 
