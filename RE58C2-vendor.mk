@@ -3389,7 +3389,6 @@ PRODUCT_COPY_FILES += \
 
  PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwbinder.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidltransport.so
 
 # System library needed for Zygote and media services
 #PRODUCT_COPY_FILES += \
