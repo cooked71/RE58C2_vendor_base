@@ -3381,13 +3381,11 @@ PRODUCT_COPY_FILES += \
 
 # Missing HIDL libraries for vendor services
 PRODUCT_COPY_FILES += \
-    # 64-bit libraries
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.1.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.broadcastradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.broadcastradio@2.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidltransport.so \
-    # 32-bit libraries
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth@1.1.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwbinder.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidltransport.so
