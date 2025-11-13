@@ -3017,6 +3017,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/libteecPlatform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteecPlatform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libteeproduction.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteeproduction.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libtinycompress_unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress_unisoc.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libtinyxml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libtracedump.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtracedump.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libtrusty.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrusty.so \
@@ -3146,6 +3148,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/face.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/face.default.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gps.default.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.default.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/gralloc.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/gsp.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gsp.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/hwcomposer.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/jiiov.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/jiiov.fingerprint.default.so \
@@ -3183,11 +3186,12 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libatci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libatci.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libaudioclient_aidl_conversion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioclient_aidl_conversion.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libaudiofoundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudiofoundation.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libavcodec-58.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavcodec-58.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libavutil-56.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavutil-56.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbinderdebug.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderdebug.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
+    vendor/realme/RE58C2/proprietary/    vendor/realme/RE58C2/proprietary/vendor/lib64/libavcodec-58.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavcodec-58.so \
+vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_aidl.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbt-sprd_suite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-sprd_suite.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbt-ssp_bt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-ssp_bt.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera2ndk_vendor.so \
@@ -3274,6 +3278,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libteecPlatform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteecPlatform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libteeproduction.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteeproduction.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtinycompress_unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_unisoc.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtinyxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtrusty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrusty.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtrustyHalHelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrustyHalHelper.so \
@@ -3420,6 +3425,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.gnss.visibility_control@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.gnss.visibility_control@1.0.so 
 
 
 
