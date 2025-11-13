@@ -3448,8 +3448,14 @@ PRODUCT_COPY_FILES += \
 
 # HDCP library stays in system_ext where it belongs
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.sprd.hardware.hdcp@1.0.so
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.sprd.hardware.hdcp@1.0.so \
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.sprd.hardware.hdcp@1.0.so \
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.sprd.hardware.hdcp@1.0.so 
 
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/andrandroid.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so
 
 
 
