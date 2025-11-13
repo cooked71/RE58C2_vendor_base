@@ -3188,8 +3188,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libaudiofoundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudiofoundation.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libavutil-56.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavutil-56.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbinderdebug.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderdebug.so \
-    vendor/realme/RE58C2/proprietary/    vendor/realme/RE58C2/proprietary/vendor/lib64/libavcodec-58.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavcodec-58.so \
-vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
+    vendor/realme/RE58C2/proprietary/vendor/realme/RE58C2/proprietary/vendor/lib64/libavcodec-58.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavcodec-58.so \
+    vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_aidl.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libbt-sprd_suite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-sprd_suite.so \
