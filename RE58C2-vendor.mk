@@ -3399,7 +3399,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
+    vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
 
 # Missing HIDL libraries
 PRODUCT_COPY_FILES += \
@@ -3429,7 +3429,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.gnss.visibility_control@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.gnss.visibility_control@1.0.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.biometrics.face-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.biometrics.face-V2-ndk.so
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.biometrics.face-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.biometrics.face-V2-ndk.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.radio.deprecated@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.radio.deprecated@1.0.so 
 
 
 
