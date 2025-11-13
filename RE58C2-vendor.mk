@@ -3423,23 +3423,17 @@ PRODUCT_COPY_FILES += \
 
 # Fix libmediahdrtosdrtransform location - copy from vendor to system
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmediahdrtosdrtransform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmediahdrtosdrtransform.so
 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.gnss.visibility_control@1.0.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.gnss.visibility_control@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.visibility_control@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.visibility_control@1.0.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.biometrics.face-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.biometrics.face-V2-ndk.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.deprecated@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.radio.deprecated@1.0.so 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.deprecated@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.biometrics.face-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.face-V2-ndk.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/audio.primary.whale.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.whale.so \
@@ -3448,10 +3442,24 @@ PRODUCT_COPY_FILES += \
 
 # HDCP library stays in system_ext where it belongs
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.sprd.hardware.hdcp@1.0.so
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.sprd.hardware.hdcp@1.0.so \
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.sprd.hardware.hdcp@1.0.so 
 
 
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so
 
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so 
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  
 
 
 
