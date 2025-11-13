@@ -3457,8 +3457,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so :$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  \
-    vendor/realme/RE58C2/proprietary/system/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so :$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so :$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so :$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  
 
 
 
