@@ -3457,7 +3457,20 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/andrandroid.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so
 
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.mapper:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper
 
+
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.graphics.mapper@2.0.so:system/lib64/android.hardware.graphics.mapper@2.0.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.graphics.mapper@2.1.so:system/lib64/android.hardware.graphics.mapper@2.1.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.graphics.mapper@3.0.so:system/lib64/android.hardware.graphics.mapper@3.0.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.graphics.mapper@4.0.so:system/lib64/android.hardware.graphics.mapper@4.0.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/libgralloctypes.so:system/lib64/libgralloctypes.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.power-V3-ndk.so:system/lib64/android.hardware.power-V3-ndk.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.gnss.measurement_corrections@1.1.so:system/lib64/android.hardware.gnss.measurement_corrections@1.1.so 
 
 
 
