@@ -3434,7 +3434,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.radio.deprecated@1.0.so 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.deprecated@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.biometrics.face-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.face-V2-ndk.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/audio.primary.whale.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.whale.so \
@@ -3453,8 +3452,10 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
-    vendor/realme/RE58C2/proprietary/system/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so 
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so 
 
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so :$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  \
