@@ -453,19 +453,19 @@ cc_prebuilt_binary {
 // =============================================
 
 // APN configuration files - product specific
-prebuilt_etc {
-    name: "apns-conf.xml",
-    owner: "realme", 
-    src: "proprietary/product/etc/apns-conf.xml",
-    filename_from_src: true,
-    sub_dir: "etc",
-}
+// prebuilt_etc {
+//  name: "apns-conf.xml",
+//    owner: "realme", 
+ //   src: "proprietary/product/etc/apns-conf.xml",
+ //   filename_from_src: true,
+ //   sub_dir: "etc",
+//}
 
-prebuilt_etc {
-    name: "old-apns-conf.xml", 
-    owner: "realme",
-    src: "proprietary/product/etc/old-apns-conf.xml",
-    filename_from_src: true,
-    sub_dir: "etc",
-}
+//prebuilt_etc {
+//    name: "old-apns-conf.xml", 
+//    owner: "realme",
+//    src: "proprietary/product/etc/old-apns-conf.xml",
+ //   filename_from_src: true,
+  //  sub_dir: "etc",
+//}
 
