@@ -3485,10 +3485,12 @@ PRODUCT_PACKAGES += \
     UASetting \
     SoterService \
     ims \
+    UniTelephony \
     AIEngineService \
     radio_interactor_service \
     SprdContactsProvider \
     SprdCalendarProviderPrebuilt \
+    OmacpPrebuilt \
     ImsServiceEntitlement
 
 
