@@ -110,16 +110,16 @@ android_app_import {
         enabled: false,
     },
 }
-
-android_app_import {
-    name: "OmacpPrebuilt",
-    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
-    privileged: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-}
+// removed crash
+// android_app_import {
+//    name: "OmacpPrebuilt",
+//    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
+//    privileged: true,
+//    presigned: true,
+//   dex_preopt: {
+//        enabled: false,
+//    },
+// }
 
 android_app_import {
     name: "ImsServiceEntitlement",

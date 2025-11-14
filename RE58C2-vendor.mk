@@ -3492,7 +3492,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
-    UASetting
+    UASetting 
+     
 
 # Product packages  
 PRODUCT_PACKAGES += \
