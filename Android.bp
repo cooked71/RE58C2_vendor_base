@@ -60,6 +60,77 @@ android_app_import {
 	privileged: true,
 	system_ext_specific: true,
 }
+// Essential telephony and vendor APKs
+android_app_import {
+    name: "UniTelephony",
+    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "AIEngineService",
+    apk: "proprietary/system_ext/priv-app/AIEngineService/AIEngineService.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "radio_interactor_service",
+    apk: "proprietary/system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "SprdContactsProvider",
+    apk: "proprietary/system_ext/priv-app/SprdContactsProvider/SprdContactsProvider.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "SprdCalendarProviderPrebuilt",
+    apk: "proprietary/system_ext/priv-app/SprdCalendarProviderPrebuilt/SprdCalendarProviderPrebuilt.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "OmacpPrebuilt",
+    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "ImsServiceEntitlement",
+    apk: "proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
 
 dex_import {
 	name: "androidx.camera.extensions.impl",
