@@ -3487,7 +3487,6 @@ PRODUCT_PACKAGES += \
     ims \
     UniTelephony \
     AIEngineService \
-    radio_interactor_service \
     SprdContactsProvider \
     SprdCalendarProviderPrebuilt \
     OmacpPrebuilt \

@@ -77,17 +77,6 @@ android_app_import {
     system_ext_specific: true,
 }
 
-android_app_import {
-    name: "radio_interactor_service",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
 
 android_app_import {
     name: "SprdContactsProvider",
