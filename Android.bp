@@ -156,9 +156,7 @@ prebuilt_etc_xml {
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
-
-
-
+}
 
 prebuilt_etc_xml {
 	name: "android.hardware.security.keymint@2.0-unisoc.service.trusty",
