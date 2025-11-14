@@ -974,7 +974,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.media.c2@1.1-unisoc-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.1-unisoc-service \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.media.omx@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.omx@1.0-service \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-armnn-gpu:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.3-service-armnn-gpu \
-    vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.nfc@1.2-service \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.power.stats-service.example:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.power.stats-service.example \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.rebootescrow-service.default:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.rebootescrow-service.default \
     vendor/realme/RE58C2/proprietary/vendor/bin/hw/android.hardware.security.keymint@2.0-unisoc.service.trusty:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint@2.0-unisoc.service.trusty \
@@ -1228,7 +1227,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.media.c2@1.1-unisoc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.1-unisoc-service.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.media.omx@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.omx@1.0-service.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-armnn-gpu.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-armnn-gpu.rc \
-    vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.security.keymint@2.0-unisoc.service.trusty.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint@2.0-unisoc.service.trusty.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.sensors-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors-service-multihal.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/android.hardware.usb-service.example.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-service.example.rc \
@@ -1249,7 +1247,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/init.guid.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.guid.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/init.md.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.md.rc \
-    vendor/realme/RE58C2/proprietary/vendor/etc/init/init.ums9230_hulk_Natv.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ums9230_hulk_Natv.nfc.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/lights.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/realme/RE58C2/proprietary/vendor/etc/init/modem_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/modem_control.rc \
@@ -2858,7 +2855,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.audio@7.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@7.1-impl.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.broadcastradio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.broadcastradio@1.0-impl.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.gnss@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gnss@2.1-impl.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.nfc@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.nfc@1.0-impl.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.renderscript@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.renderscript@1.0-impl.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/audio.bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth.default.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/audio.bluetooth.ums9230.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth.ums9230.so \
@@ -3469,6 +3465,16 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator@4.0-impl-arm.so  \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so 
    
+
+# System_ext permissions and priv-apps
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/etc/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions) \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/priv-app,$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app)
+
+# Product permissions and priv-apps
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/priv-app,$(TARGET_COPY_OUT_PRODUCT)/priv-app)   
 
 # =============================================
 # VENDOR APPS & SYSTEM APPS
