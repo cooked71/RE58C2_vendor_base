@@ -5,176 +5,125 @@
 soong_namespace {
 }
 
-android_app_import {
-	name: "LogManager",
-	owner: "realme",
-	apk: "proprietary/vendor/app/LogManager/LogManager.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
+// =============================================
+// VENDOR APPS
+// =============================================
 
 android_app_import {
-	name: "ProxyNFwLocation",
-	owner: "realme",
-	apk: "proprietary/vendor/app/ProxyNFwLocation/ProxyNFwLocation.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "UASetting",
-	owner: "realme",
-	apk: "proprietary/vendor/app/UASetting/UASetting.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "SoterService",
-	owner: "realme",
-	apk: "proprietary/system_ext/app/SoterService/SoterService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "ims",
-	owner: "realme",
-	apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-// Essential telephony and vendor APKs
-android_app_import {
-    name: "UniTelephony",
-    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
-    privileged: true,
-    presigned: true,
+    name: "LogManager",
+    owner: "realme",
+    apk: "proprietary/vendor/app/LogManager/LogManager.apk",
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    soc_specific: true,
+}
+
+android_app_import {
+    name: "ProxyNFwLocation",
+    owner: "realme",
+    apk: "proprietary/vendor/app/ProxyNFwLocation/ProxyNFwLocation.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    soc_specific: true,
+}
+
+android_app_import {
+    name: "UASetting",
+    owner: "realme",
+    apk: "proprietary/vendor/app/UASetting/UASetting.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    soc_specific: true,
+}
+
+android_app_import {
+    name: "SoterService",
+    owner: "realme",
+    apk: "proprietary/system_ext/app/SoterService/SoterService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "ims",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
     name: "AIEngineService",
+    owner: "realme",
     apk: "proprietary/system_ext/priv-app/AIEngineService/AIEngineService.apk",
-    privileged: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
     name: "radio_interactor_service",
+    owner: "realme",
     apk: "proprietary/system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk",
-    privileged: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
     name: "SprdContactsProvider",
+    owner: "realme",
     apk: "proprietary/system_ext/priv-app/SprdContactsProvider/SprdContactsProvider.apk",
-    privileged: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
     name: "SprdCalendarProviderPrebuilt",
+    owner: "realme",
     apk: "proprietary/system_ext/priv-app/SprdCalendarProviderPrebuilt/SprdCalendarProviderPrebuilt.apk",
-    privileged: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
+    system_ext_specific: true,
 }
-// removed crash
-// android_app_import {
-//    name: "OmacpPrebuilt",
-//    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
-//    privileged: true,
-//    presigned: true,
-//   dex_preopt: {
-//        enabled: false,
-//    },
-// }
 
 android_app_import {
     name: "ImsServiceEntitlement",
+    owner: "realme",
     apk: "proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
-    privileged: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
     product_specific: true,
 }
-
-dex_import {
-	name: "androidx.camera.extensions.impl",
-	owner: "realme",
-	jars: ["proprietary/vendor/framework/androidx.camera.extensions.impl.jar"],
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "ai_engine-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/ai_engine-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.biometrics.fingerprint@2.1-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.cas@1.2-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.drm-service.clearkey",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
 prebuilt_etc_xml {
 	name: "android.hardware.gatekeeper@1.0-service.trusty",
 	owner: "realme",

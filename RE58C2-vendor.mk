@@ -3478,28 +3478,20 @@ PRODUCT_COPY_FILES += \
 # VENDOR APPS & SYSTEM APPS
 # =============================================
 # System_ext packages
+# All vendor packages
 PRODUCT_PACKAGES += \
+    LogManager \
+    ProxyNFwLocation \
+    UASetting \
+    SoterService \
     ims \
-    UniTelephony \
     AIEngineService \
     radio_interactor_service \
     SprdContactsProvider \
     SprdCalendarProviderPrebuilt \
-    SoterService
-
-    #OmacpPrebuilt \ crashing
-
-
-# Vendor packages
-PRODUCT_PACKAGES += \
-    LogManager \
-    ProxyNFwLocation \
-    UASetting 
-     
-
-# Product packages  
-PRODUCT_PACKAGES += \
     ImsServiceEntitlement
+
+
 
 # =============================================
 # FRAMEWORK & LIBRARIES
