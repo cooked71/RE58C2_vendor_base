@@ -3477,12 +3477,26 @@ PRODUCT_COPY_FILES += \
 # =============================================
 # VENDOR APPS & SYSTEM APPS
 # =============================================
+# System_ext packages
+PRODUCT_PACKAGES += \
+    ims \
+    UniTelephony \
+    AIEngineService \
+    radio_interactor_service \
+    SprdContactsProvider \
+    SprdCalendarProviderPrebuilt \
+    OmacpPrebuilt \
+    SoterService
+
+# Vendor packages
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
-    UASetting \
-    SoterService \
-    ims
+    UASetting
+
+# Product packages  
+PRODUCT_PACKAGES += \
+    ImsServiceEntitlement
 
 # =============================================
 # FRAMEWORK & LIBRARIES
