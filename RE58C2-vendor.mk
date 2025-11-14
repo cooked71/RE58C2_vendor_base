@@ -3469,12 +3469,10 @@ PRODUCT_COPY_FILES += \
 # System_ext permissions and priv-apps
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/etc/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions) \
-    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/priv-app,$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app)
 
 # Product permissions and priv-apps
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
-    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/priv-app,$(TARGET_COPY_OUT_PRODUCT)/priv-app)   
 
 # =============================================
 # VENDOR APPS & SYSTEM APPS
