@@ -3485,8 +3485,10 @@ PRODUCT_PACKAGES += \
     radio_interactor_service \
     SprdContactsProvider \
     SprdCalendarProviderPrebuilt \
-    OmacpPrebuilt \
     SoterService
+
+    #OmacpPrebuilt \ crashing
+
 
 # Vendor packages
 PRODUCT_PACKAGES += \
