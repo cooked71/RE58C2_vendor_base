@@ -186,6 +186,20 @@ android_app_import {
     system_ext_specific: true,
 }
 
+// Unisoc Resources APK (framework resource package)
+android_app_import {
+    name: "unisoc-res",
+    owner: "realme", 
+    apk: "proprietary/system_ext/framework/unisoc-res.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+	privileged: true,
+    system_ext_specific: true,
+    
+}
+
 
 prebuilt_etc_xml {
 	name: "android.hardware.gatekeeper@1.0-service.trusty",
