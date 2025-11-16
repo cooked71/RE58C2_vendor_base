@@ -3474,6 +3474,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
 
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_OUT_SYSTEM_EXT)/framework/com.unisoc.sdk.common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-res.apk:$(TARGET_OUT_SYSTEM_EXT)/framework/unisoc-res.apk \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.phone.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.phone.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.sdk.common.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.emergency.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.emergency.xml
+
+# Add Unisoc framework to bootclasspath
+PRODUCT_BOOT_JARS += \
+    com.unisoc.sdk.common
+
+
 # =============================================
 # VENDOR APPS & SYSTEM APPS
 # =============================================
