@@ -3483,7 +3483,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.emergency.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.emergency.xml
 
 # Add Unisoc framework to bootclasspath
-PRODUCT_BOOT_JARS += \
+# PRODUCT_BOOT_JARS += \
     com.unisoc.sdk.common
 
 
