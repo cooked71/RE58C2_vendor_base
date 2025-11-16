@@ -150,6 +150,30 @@ android_app_import {
     system_ext_specific: true,
 }
 
+android_app_import {
+    name: "UniTelephony",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "OmacpPrebuilt",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
 
 prebuilt_etc_xml {
 	name: "android.hardware.gatekeeper@1.0-service.trusty",
@@ -533,26 +557,3 @@ cc_prebuilt_binary {
 //}
 
 
-android_app_import {
-    name: "UniTelephony",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "OmacpPrebuilt",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
