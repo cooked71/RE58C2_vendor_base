@@ -113,6 +113,68 @@ android_app_import {
     privileged: true,
     product_specific: true,
 }
+
+// WiFi Overlays
+android_app_import {
+    name: "AospWifiOverlay_Marlin3",
+    owner: "realme",
+    apk: "proprietary/vendor/overlay/AospWifiOverlay_Marlin3/AospWifiOverlay_Marlin3.apk",
+    certificate: "platform",
+    product_specific: true,
+}
+
+android_app_import {
+    name: "UniWifiOverlay_Marlin3", 
+    owner: "realme",
+    apk: "proprietary/vendor/overlay/UniWifiOverlay_Marlin3/UniWifiOverlay_Marlin3.apk",
+    certificate: "platform",
+    product_specific: true,
+}
+
+// WiFi System APKs
+android_app_import {
+    name: "UniWifiDialog",
+    owner: "realme", 
+    apk: "proprietary/system_ext/priv-app/UniWifiDialog/UniWifiDialog.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "ServiceUniWifiResources",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/ServiceUniWifiResources/ServiceUniWifiResources.apk", 
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "UniTelephony",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "OmacpPrebuilt",
+    owner: "realme",
+    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+
 prebuilt_etc_xml {
 	name: "android.hardware.gatekeeper@1.0-service.trusty",
 	owner: "realme",
@@ -495,26 +557,3 @@ cc_prebuilt_binary {
 //}
 
 
-android_app_import {
-    name: "UniTelephony",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/UniTelephony/UniTelephony.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "OmacpPrebuilt",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}

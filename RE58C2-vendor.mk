@@ -3479,6 +3479,7 @@ PRODUCT_COPY_FILES += \
 # =============================================
 # System_ext packages
 # All vendor packages
+PR
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
@@ -3490,9 +3491,11 @@ PRODUCT_PACKAGES += \
     SprdContactsProvider \
     SprdCalendarProviderPrebuilt \
     OmacpPrebuilt \
-    ImsServiceEntitlement
-
-
+    ImsServiceEntitlement \
+    AospWifiOverlay_Marlin3 \
+    UniWifiOverlay_Marlin3 \
+    UniWifiDialog \
+    ServiceUniWifiResources
 
 # =============================================
 # FRAMEWORK & LIBRARIES
