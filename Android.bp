@@ -212,6 +212,13 @@ dex_import {
 	soc_specific: true,
 }
 
+java_import {
+    name: "com.unisoc.sdk.common",
+    host_supported: false,
+    installable: false,
+    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+}
+
 prebuilt_etc_xml {
 	name: "ai_engine-default",
 	owner: "realme",
