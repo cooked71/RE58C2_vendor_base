@@ -3479,7 +3479,6 @@ PRODUCT_COPY_FILES += \
 # =============================================
 # System_ext packages
 # All vendor packages
-PR
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
