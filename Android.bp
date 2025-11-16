@@ -9,6 +9,7 @@ soong_namespace {
 // VENDOR APPS
 // =============================================
 
+// Vendor Apps
 android_app_import {
     name: "LogManager",
     owner: "realme",
@@ -42,6 +43,7 @@ android_app_import {
     soc_specific: true,
 }
 
+// SystemExt Apps
 android_app_import {
     name: "SoterService",
     owner: "realme",
@@ -53,6 +55,7 @@ android_app_import {
     system_ext_specific: true,
 }
 
+// SystemExt Privileged Apps
 android_app_import {
     name: "ims",
     owner: "realme",
@@ -76,7 +79,6 @@ android_app_import {
     privileged: true,
     system_ext_specific: true,
 }
-
 
 android_app_import {
     name: "SprdContactsProvider",
@@ -102,25 +104,13 @@ android_app_import {
     system_ext_specific: true,
 }
 
-android_app_import {
-    name: "ImsServiceEntitlement",
-    owner: "realme",
-    apk: "proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
-
 // WiFi Overlays
 android_app_import {
     name: "AospWifiOverlay_Marlin3",
     owner: "realme",
     apk: "proprietary/vendor/overlay/AospWifiOverlay_Marlin3/AospWifiOverlay_Marlin3.apk",
     certificate: "platform",
-	dex_preopt: {
+    dex_preopt: {
         enabled: false,
     },
     product_specific: true,
@@ -131,7 +121,7 @@ android_app_import {
     owner: "realme",
     apk: "proprietary/vendor/overlay/UniWifiOverlay_Marlin3/UniWifiOverlay_Marlin3.apk",
     certificate: "platform",
-	dex_preopt: {
+    dex_preopt: {
         enabled: false,
     },
     product_specific: true,
@@ -143,7 +133,7 @@ android_app_import {
     owner: "realme", 
     apk: "proprietary/system_ext/priv-app/UniWifiDialog/UniWifiDialog.apk",
     certificate: "platform",
-	dex_preopt: {
+    dex_preopt: {
         enabled: false,
     },
     privileged: true,
@@ -155,7 +145,7 @@ android_app_import {
     owner: "realme",
     apk: "proprietary/system_ext/priv-app/ServiceUniWifiResources/ServiceUniWifiResources.apk", 
     certificate: "platform",
-	dex_preopt: {
+    dex_preopt: {
         enabled: false,
     },
     privileged: true,
@@ -191,15 +181,13 @@ android_app_import {
     name: "unisoc-res",
     owner: "realme", 
     apk: "proprietary/system_ext/framework/unisoc-res.apk",
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
-	privileged: true,
+    privileged: true,
     system_ext_specific: true,
-    
 }
-
 
 prebuilt_etc_xml {
 	name: "android.hardware.gatekeeper@1.0-service.trusty",
