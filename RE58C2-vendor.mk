@@ -3674,7 +3674,7 @@ PRODUCT_PACKAGES += \
 # VENDOR SERVICES
 PRODUCT_PACKAGES += \
     LogManager \
-    ProxyNFwLocation \ 
+    ProxyNFwLocation \
     UASetting \
     SoterService
 
