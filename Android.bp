@@ -59,6 +59,17 @@ android_app_import {
     system_ext_specific: true,
 }
 
+android_app_import {
+    name: "UnisocStk",
+    owner: "realme",
+    apk: "proprietary/system_ext/app/UnisocStk/UnisocStk.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
+
 // =============================================
 // SYSTEM_EXT PRIVILEGED APPS
 // =============================================

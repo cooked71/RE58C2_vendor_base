@@ -3519,17 +3519,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.odex \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.vdex
 
-# GoogleFeedback
-PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.vdex
-
-# GoogleServicesFramework
-PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk.prof:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk.prof \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.art:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.art \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.vdex
 
 # ims
 PRODUCT_COPY_FILES += \
@@ -3635,6 +3624,22 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex
 
+# Unisoc telephony framework JARs (these contain the actual classes)
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar:system/system/framework/radio_interactor_common.jar \
+    vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:system/system/framework/unisoc-services.jar \
+    vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:system/system/framework/unisoc_ims_common.jar \
+    vendor/realme/RE58C2/proprietary/system/framework/ims-common.jar:system/system/framework/ims-common.jar
+
+# Unisoc PNP framework
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system/framework/unipnp-features.jar:system/system/framework/unipnp-features.jar \
+    vendor/realme/RE58C2/proprietary/system/framework/unipnp-services.jar:system/system/framework/unipnp-services.jar
+
+# Unisoc native libraries
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:system/system/lib/libsprdssense.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:system/system/lib64/libsprdssense.so
 
 # =============================================
 # OPTIMIZED PACKAGE LIST
@@ -3665,7 +3670,8 @@ PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
     UASetting \
-    SoterService
+    SoterService \
+    UnisocStk
 
 # OVERLAYS
 PRODUCT_PACKAGES += \
