@@ -3670,7 +3670,8 @@ PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
     UASetting \
-    SoterService
+    SoterService \
+    UnisocStk
 
 # OVERLAYS
 PRODUCT_PACKAGES += \
