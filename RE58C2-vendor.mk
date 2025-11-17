@@ -3637,7 +3637,7 @@ PRODUCT_COPY_FILES += \
 
 
 # =============================================
-# VENDOR APPS & SYSTEM APPS
+# OPTIMIZED PACKAGE LIST
 # =============================================
 
 # ESSENTIAL - Telephony/Radio
@@ -3660,17 +3660,6 @@ PRODUCT_PACKAGES += \
     AIEngineService \
     unisoc-res
 
-# SYSTEM PROVIDERS (keep for stability)
-PRODUCT_PACKAGES += \
-    SprdContactsProvider \
-    SprdCalendarProviderPrebuilt \
-    OmacpPrebuilt
-
-# SETUP & PROVISIONING
-PRODUCT_PACKAGES += \
-    SetupWizard \
-    RemoteProvisioner
-
 # VENDOR SERVICES
 PRODUCT_PACKAGES += \
     LogManager \
@@ -3682,22 +3671,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AospWifiOverlay_Marlin3 \
     UniWifiOverlay_Marlin3
-
-# REMOVED - Google Services
-# GoogleServicesFramework
-# GoogleFeedback  
-# EmergencyInfoGms
-
-# REMOVED - Realme Bloatware
-# AppHub
-# GlobalSearch
-# Srmi
-# SearchLauncherQuickStep
-# QuickAccessWallet
-# PowerSaveModeLauncherPrebuilt
-# NetworkSliceAgent
-# WallpaperCropper
-
+    
 # =============================================
 # FRAMEWORK & LIBRARIES
 # =============================================
