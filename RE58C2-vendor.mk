@@ -3641,6 +3641,13 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
     vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
 
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system/framework/boot-radio_interactor_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-radio_interactor_common.vdex \
+    vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc-framework.vdex \
+    vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc_ims_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc_ims_common.vdex \
+    vendor/realme/RE58C2/proprietary/system/framework/boot-unipnp-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unipnp-framework.vdex
+
+
 # =============================================
 # OPTIMIZED PACKAGE LIST
 # =============================================
