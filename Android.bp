@@ -442,6 +442,37 @@ dex_import {
 	soc_specific: true,
 }
 
+// Unisoc telephony framework prebuilts
+java_import {
+    name: "radio_interactor_common",
+    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "unisoc-services", 
+    jars: ["proprietary/system/framework/unisoc-services.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "unisoc_ims_common",
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"], 
+    installable: true,
+}
+
+java_import {
+    name: "unipnp-features",
+    jars: ["proprietary/system/framework/unipnp-features.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "unipnp-services", 
+    jars: ["proprietary/system/framework/unipnp-services.jar"],
+    installable: true,
+}
+
 java_import {
     name: "com.unisoc.sdk.common",
     host_supported: false,
