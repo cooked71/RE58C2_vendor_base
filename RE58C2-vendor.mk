@@ -2868,6 +2868,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/face.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/face.default.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gps.default.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.default.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/gralloc.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/gsp.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gsp.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/hwcomposer.unisoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.unisoc.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/jiiov.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/jiiov.fingerprint.default.so \
