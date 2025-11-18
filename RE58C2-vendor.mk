@@ -3684,6 +3684,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AospWifiOverlay_Marlin3 \
     UniWifiOverlay_Marlin3
+
+
+# SYSTEM JARS
+PRODUCT_PACKAGES += \
+    radio_interactor_common \
+    unisoc-services \
+    unisoc_ims_common \
+    unipnp-features \
+    unipnp-services
+
     
 # =============================================
 # FRAMEWORK & LIBRARIES
