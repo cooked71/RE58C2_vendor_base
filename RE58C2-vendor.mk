@@ -3668,6 +3668,7 @@ PRODUCT_PACKAGES += \
 
 # CORE SYSTEM
 PRODUCT_PACKAGES += \
+    UASetting \
     SystemUI \
     Settings
 
