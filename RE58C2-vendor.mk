@@ -3628,19 +3628,19 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex
 
 # Unisoc telephony framework JARs (these contain the actual classes)
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/radio_interactor_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc_ims_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/ims-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/ims-common.jar
 
 # Unisoc PNP framework
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unipnp-features.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-features.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unipnp-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-services.jar
 
 # Unisoc native libraries
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
     vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
 
