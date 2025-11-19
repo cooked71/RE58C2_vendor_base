@@ -3660,31 +3660,26 @@ PRODUCT_COPY_FILES += \
 # PRODUCT_PACKAGES - MINIMAL ACTIVE CONFIGURATION
 # =============================================
 
-# ABSOLUTE MINIMUM - TELEPHONY/RADIO (MUST HAVE)
 PRODUCT_PACKAGES += \
-    radio_interactor_service \
-    UniTelephony \
-    ims
-
-# CORE SYSTEM
-PRODUCT_PACKAGES += \
+    LogManager \
+    ProxyNFwLocation \
     UASetting \
-    SystemUI \
-    Settings
-
-# UNISOC HARDWARE
-PRODUCT_PACKAGES += \
+    SoterService \
+    ims \
+    UniTelephony \
+    AIEngineService \
+    OmacpPrebuilt \
+    ImsServiceEntitlement \
+    AospWifiOverlay_Marlin3 \
+    UniWifiOverlay_Marlin3 \
     UniWifiDialog \
     ServiceUniWifiResources
-
-# VENDOR SERVICES
-PRODUCT_PACKAGES += \
-    LogManager
 
 # =============================================
 # REMOVED PACKAGES - COMMENTED OUT
 # =============================================
-
+# radio_interactor_service 
+# UniTelephony 
 # CarrierConfig                   # Use AOSP CarrierConfig instead
 # StorageManager                  # Use AOSP StorageManager instead
 # AIEngineService                 # AI features - test if camera works without
