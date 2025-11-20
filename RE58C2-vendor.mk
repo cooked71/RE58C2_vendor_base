@@ -3654,6 +3654,9 @@ PRODUCT_COPY_FILES += \
  PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar 
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/realme/RE58C2/vendor/etc/permissions,$(TARGET_COPY_OUT_VENDOR)/etc/permissions)
+
 
 
 
