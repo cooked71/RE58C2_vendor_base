@@ -469,7 +469,7 @@ java_import {
 
 java_import {
     name: "uni-telephony-common", 
-    jars: ["proprietary/system/framework/uni-telephony-common.jar"],
+    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
     installable: true,
 }
 
