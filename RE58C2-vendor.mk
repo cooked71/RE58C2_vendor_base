@@ -3672,17 +3672,19 @@ PRODUCT_PACKAGES += \
     UASetting \
     SoterService \
     ims \
-    UniTelephony \
     AIEngineService \
     OmacpPrebuilt \
     AospWifiOverlay_Marlin3 \
     UniWifiOverlay_Marlin3 \
     UniWifiDialog \
-    ServiceUniWifiResources
+    ServiceUniWifiResources \
+    com.android.wifi
+
 
 # =============================================
 # REMOVED PACKAGES - COMMENTED OUT
 # =============================================
+#    UniTelephony \
 # ImsServiceEntitlement 
 # radio_interactor_service 
 # UniTelephony 
