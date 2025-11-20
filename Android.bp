@@ -158,6 +158,12 @@ android_app_import {
     },
     privileged: true,
     system_ext_specific: true,
+    
+    uses_libs: [
+        "com.unisoc.sdk.common",
+        "unisoc-framework",
+    ],
+    optional_uses_libs: [],
 }
 
 // System Providers
@@ -454,6 +460,19 @@ java_import {
     jars: ["proprietary/system/framework/unisoc-services.jar"],
     installable: true,
 }
+
+java_import {
+    name: "unisoc-framework", 
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "uni-telephony-common", 
+    jars: ["proprietary/system/framework/uni-telephony-common.jar"],
+    installable: true,
+}
+
 
 java_import {
     name: "unisoc_ims_common",
