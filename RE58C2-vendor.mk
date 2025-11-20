@@ -3678,7 +3678,8 @@ PRODUCT_PACKAGES += \
     UniWifiOverlay_Marlin3 \
     UniWifiDialog \
     ServiceUniWifiResources \
-    com.android.wifi
+    com.android.wifi \
+    WifiService
 
 
 # =============================================
