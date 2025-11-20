@@ -3468,14 +3468,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so 
    
 
-# System_ext permissions and priv-apps
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/etc/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions) \
-
-# Product permissions and priv-apps
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
-
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_OUT_SYSTEM_EXT)/framework/com.unisoc.sdk.common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.phone.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.phone.xml \
@@ -3655,7 +3647,11 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar 
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/realme/RE58C2/vendor/etc/permissions,$(TARGET_COPY_OUT_VENDOR)/etc/permissions)
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/vendor/etc/permissions,$(TARGET_COPY_OUT_VENDOR)/etc/permissions) \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
+    $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/etc/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions) 
+
+
 
 
 
