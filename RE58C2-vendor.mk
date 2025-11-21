@@ -3681,18 +3681,10 @@ PRODUCT_PACKAGES += \
 
  # Add UniSoc telephony packages
 PRODUCT_PACKAGES += \
-    UniTelephony \
     radio_interactor_service \
     unisoc-res \
     unisoc-services
 
-PRODUCT_PACKAGES := $(filter-out \
-    TeleService \
-    Telecom \
-    MmsService \
-    CellBroadcastLegacyApp \
-    ONS, \
-    $(PRODUCT_PACKAGES))
    
 
 
