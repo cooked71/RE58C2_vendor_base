@@ -3677,7 +3677,7 @@ PRODUCT_PACKAGES += \
     UniWifiOverlay_Marlin3 \
     UniWifiDialog \
     ServiceUniWifiResources \
-    com.android.wifi \
+    com.android.wifi 
 
  # Add UniSoc telephony packages
 PRODUCT_PACKAGES += \
