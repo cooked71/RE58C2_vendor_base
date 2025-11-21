@@ -3677,13 +3677,29 @@ PRODUCT_PACKAGES += \
     UniWifiOverlay_Marlin3 \
     UniWifiDialog \
     ServiceUniWifiResources \
-    com.android.wifi 
+    com.android.wifi \
+
+ # Add UniSoc telephony packages
+PRODUCT_PACKAGES += \
+    UniTelephony \
+    radio_interactor_service \
+    unisoc-res \
+    unisoc-services
+
+PRODUCT_PACKAGES := $(filter-out \
+    TeleService \
+    Telecom \
+    MmsService \
+    CellBroadcastLegacyApp \
+    ONS, \
+    $(PRODUCT_PACKAGES))
+   
 
 
 # =============================================
 # REMOVED PACKAGES - COMMENTED OUT
 # =============================================
-#    UniTelephony \
+# UniTelephony 
 # ImsServiceEntitlement 
 # radio_interactor_service 
 # UniTelephony 
