@@ -3680,10 +3680,14 @@ PRODUCT_PACKAGES += \
     com.android.wifi 
 
  # Add UniSoc telephony packages
-PRODUCT_PACKAGES += \
+
+
+# PRODUCT_PACKAGES += \
+    UniTelephony \
     radio_interactor_service \
     unisoc-res \
     unisoc-services
+
 
    
 
