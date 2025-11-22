@@ -3756,7 +3756,9 @@ PRODUCT_PACKAGES += \
 # =============================================
 
 PRODUCT_BOOT_JARS += \
-    radio_interactor_common
+    radio_interactor_common \
+        unisoc_ims_common
+
 
 
 PRODUCT_SYSTEM_PROPERTIES += \
