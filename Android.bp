@@ -376,11 +376,10 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
-    system_specific: true,
 }
 
 android_app_import {
-    name: "TelephonyProvider",
+    name: "TelephonyProvider", 
     owner: "realme",
     apk: "proprietary/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
     certificate: "platform",
@@ -388,20 +387,19 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
-    system_specific: true,
 }
 
 android_app_import {
     name: "TeleService",
     owner: "realme",
-    apk: "proprietary/system/priv-app/TeleService/TeleService.apk",
+    apk: "proprietary/system/priv-app/TeleService/TeleService.apk", 
     certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
     privileged: true,
-    system_specific: true,
 }
+
 
 android_app_import {
     name: "WallpaperCropper",
