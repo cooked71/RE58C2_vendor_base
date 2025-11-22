@@ -368,6 +368,42 @@ android_app_import {
 }
 
 android_app_import {
+    name: "Telecom",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/Telecom/Telecom.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_specific: true,
+}
+
+android_app_import {
+    name: "TelephonyProvider",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_specific: true,
+}
+
+android_app_import {
+    name: "TeleService",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/TeleService/TeleService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_specific: true,
+}
+
+android_app_import {
     name: "WallpaperCropper",
     owner: "realme",
     apk: "proprietary/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk",
