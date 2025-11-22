@@ -3641,7 +3641,7 @@ PRODUCT_COPY_FILES += \
 #    vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
 #    vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/boot-radio_interactor_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-radio_interactor_common.vdex \
     vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc-framework.vdex \
     vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc_ims_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc_ims_common.vdex \
@@ -3699,13 +3699,13 @@ PRODUCT_PACKAGES += \
     com.unisoc.sdk.common
 
 # EXPLICITLY REMOVE AOSP TELEPHONY TO PREVENT CONFLICTS
-PRODUCT_PACKAGES -= \
+# PRODUCT_PACKAGES -= \
     com.android.phone \
     com.android.server.telecom \
     com.android.providers.telephony
 
 # FORCE OVERRIDE AOSP PACKAGES
-PRODUCT_OVERRIDES_PACKAGES += \
+# PRODUCT_OVERRIDES_PACKAGES += \
     TeleService \
     Telecom \
     TelephonyProvider
@@ -3747,13 +3747,17 @@ PRODUCT_PACKAGES += \
 # DISABLE CONFLICTING AOSP TELEPHONY FEATURES
 # =============================================
 
-PRODUCT_PACKAGES -= \
+#PRODUCT_PACKAGES -= \
     CellBroadcastReceiver \
     Stk
 
 # =============================================
 # UNISOC TELEPHONY CONFIGURATION
 # =============================================
+
+PRODUCT_BOOT_JARS += \
+    radio_interactor_common
+
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.radio.unisoc_support=1 \
