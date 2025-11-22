@@ -3688,9 +3688,9 @@ PRODUCT_COPY_FILES += \
 
 # UNISOC TELEPHONY OVERRIDE - DUAL LOCATION SUPPORT
 PRODUCT_PACKAGES += \
-    TeleService \
-    Telecom \
-    TelephonyProvider \
+    TeleService-unisoc \
+    Telecom-unisoc \
+    TelephonyProvider-unisoc \
     com.unisoc.xml \
     com.unisoc.phone.xml \
     com.unisoc.sdk.common.xml \
