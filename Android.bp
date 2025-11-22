@@ -75,7 +75,7 @@ android_app_import {
 // =============================================
 
 android_app_import {
-    name: "TeleService",
+    name: "TeleService-unisoc",
     owner: "realme",
     apk: "proprietary/system/priv-app/TeleService/TeleService.apk",
     certificate: "platform",
@@ -90,7 +90,7 @@ android_app_import {
 }
 
 android_app_import {
-    name: "Telecom",
+    name: "Telecom-unisoc",
     owner: "realme",
     apk: "proprietary/system/priv-app/Telecom/Telecom.apk",
     certificate: "platform",
@@ -106,7 +106,7 @@ android_app_import {
 }
 
 android_app_import {
-    name: "TelephonyProvider",
+    name: "TelephonyProvider-unisoc",
     owner: "realme",
     apk: "proprietary/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
     certificate: "platform",
