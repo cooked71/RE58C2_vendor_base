@@ -3755,9 +3755,9 @@ PRODUCT_PACKAGES += \
 # UNISOC TELEPHONY CONFIGURATION
 # =============================================
 
-PRODUCT_BOOT_JARS += \
-    radio_interactor_common \
-    unisoc_ims_common
+PRODUCT_SYSTEM_SERVER_CLASSPATH += \
+    framework/radio_interactor_common.jar \
+    framework/unisoc_ims_common.jar
 
 
 
