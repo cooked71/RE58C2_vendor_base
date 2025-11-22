@@ -9,7 +9,6 @@ soong_namespace {
 // VENDOR APPS
 // =============================================
 
-// Vendor Apps
 android_app_import {
     name: "LogManager",
     owner: "realme",
@@ -47,7 +46,6 @@ android_app_import {
 // SYSTEM_EXT APPS
 // =============================================
 
-// SystemExt Apps
 android_app_import {
     name: "SoterService",
     owner: "realme",
@@ -71,10 +69,55 @@ android_app_import {
 }
 
 // =============================================
+// UNISOC TELEPHONY APPS - UPDATED WITH CORRECT DEPENDENCIES
+// =============================================
+
+android_app_import {
+    name: "TeleService",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/TeleService/TeleService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    uses_libs: [
+        "com.unisoc.sdk.common",
+        "uni-telephony-common",
+    ],
+}
+
+android_app_import {
+    name: "Telecom",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/Telecom/Telecom.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    uses_libs: [
+        "com.unisoc.sdk.common",
+        "unisoc-framework",
+        "uni-telephony-common",
+    ],
+}
+
+android_app_import {
+    name: "TelephonyProvider",
+    owner: "realme",
+    apk: "proprietary/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+// =============================================
 // SYSTEM_EXT PRIVILEGED APPS
 // =============================================
 
-// Telephony & Radio
 android_app_import {
     name: "ims",
     owner: "realme",
@@ -135,7 +178,7 @@ android_app_import {
     system_ext_specific: true,
 }
 
-// Unisoc Telephony (CRITICAL)
+// Unisoc Telephony Services
 android_app_import {
     name: "radio_interactor_service",
     owner: "realme",
@@ -158,12 +201,10 @@ android_app_import {
     },
     privileged: true,
     system_ext_specific: true,
-    
     uses_libs: [
         "com.unisoc.sdk.common",
         "unisoc-framework",
     ],
-    optional_uses_libs: [],
 }
 
 // System Providers
@@ -307,7 +348,7 @@ android_app_import {
 // Unisoc WiFi
 android_app_import {
     name: "UniWifiDialog",
-    owner: "realme", 
+    owner: "realme",
     apk: "proprietary/system_ext/priv-app/UniWifiDialog/UniWifiDialog.apk",
     certificate: "platform",
     dex_preopt: {
@@ -320,7 +361,7 @@ android_app_import {
 android_app_import {
     name: "ServiceUniWifiResources",
     owner: "realme",
-    apk: "proprietary/system_ext/priv-app/ServiceUniWifiResources/ServiceUniWifiResources.apk", 
+    apk: "proprietary/system_ext/priv-app/ServiceUniWifiResources/ServiceUniWifiResources.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -368,40 +409,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "Telecom",
-    owner: "realme",
-    apk: "proprietary/system/priv-app/Telecom/Telecom.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-}
-
-android_app_import {
-    name: "TelephonyProvider", 
-    owner: "realme",
-    apk: "proprietary/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-}
-
-android_app_import {
-    name: "TeleService",
-    owner: "realme",
-    apk: "proprietary/system/priv-app/TeleService/TeleService.apk", 
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-}
-
-
-android_app_import {
     name: "WallpaperCropper",
     owner: "realme",
     apk: "proprietary/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk",
@@ -417,7 +424,6 @@ android_app_import {
 // OVERLAYS
 // =============================================
 
-// WiFi Overlays
 android_app_import {
     name: "AospWifiOverlay_Marlin3",
     owner: "realme",
@@ -430,7 +436,7 @@ android_app_import {
 }
 
 android_app_import {
-    name: "UniWifiOverlay_Marlin3", 
+    name: "UniWifiOverlay_Marlin3",
     owner: "realme",
     apk: "proprietary/vendor/overlay/UniWifiOverlay_Marlin3/UniWifiOverlay_Marlin3.apk",
     certificate: "platform",
@@ -441,13 +447,73 @@ android_app_import {
 }
 
 // =============================================
+// UNISOC FRAMEWORK JARS - DUAL LOCATION SUPPORT
+// =============================================
+
+// Primary framework imports for app dependencies
+java_import {
+    name: "unisoc-framework",
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    installable: false,
+}
+
+java_import {
+    name: "uni-telephony-common",
+    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
+    installable: false,
+}
+
+java_import {
+    name: "com.unisoc.sdk.common",
+    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+    installable: false,
+}
+
+// System framework jars (will be copied to /system/framework/)
+java_import {
+    name: "unisoc-framework-system",
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "uni-telephony-common-system",
+    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
+    installable: true,
+}
+
+java_import {
+    name: "com.unisoc.sdk.common-system",
+    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+    installable: true,
+}
+
+// System_ext framework jars (original location)
+java_import {
+    name: "unisoc-framework-system_ext",
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    installable: false,
+}
+
+java_import {
+    name: "uni-telephony-common-system_ext",
+    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
+    installable: false,
+}
+
+java_import {
+    name: "com.unisoc.sdk.common-system_ext",
+    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+    installable: false,
+}
+
+// =============================================
 // FRAMEWORK RESOURCES
 // =============================================
 
-// Unisoc Resources APK (framework resource package)
 android_app_import {
     name: "unisoc-res",
-    owner: "realme", 
+    owner: "realme",
     apk: "proprietary/system_ext/framework/unisoc-res.apk",
     certificate: "platform",
     dex_preopt: {
@@ -457,32 +523,80 @@ android_app_import {
     system_ext_specific: true,
 }
 
+// =============================================
+// UNISOC PERMISSIONS - DUAL LOCATION
+// =============================================
+
+// System permissions (primary)
+prebuilt_etc {
+    name: "com.unisoc.xml",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc {
+    name: "com.unisoc.phone.xml",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.phone.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc {
+    name: "com.unisoc.sdk.common.xml",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml",
+    sub_dir: "permissions",
+}
+
+// System_ext permissions (fallback)
+prebuilt_etc {
+    name: "com.unisoc.xml-system_ext",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.unisoc.phone.xml-system_ext",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.phone.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.unisoc.sdk.common.xml-system_ext",
+    src: "proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+// =============================================
+// EXISTING FRAMEWORK IMPORTS
+// =============================================
+
 prebuilt_etc_xml {
-	name: "android.hardware.gatekeeper@1.0-service.trusty",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gatekeeper@1.0-service.trusty.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.gatekeeper@1.0-service.trusty",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gatekeeper@1.0-service.trusty.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.health-service.example",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.health-service.example.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.health-service.example",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.health-service.example.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 dex_import {
-	name: "androidx.camera.extensions.impl",
-	owner: "realme",
-	jars: ["proprietary/vendor/framework/androidx.camera.extensions.impl.jar"],
-	soc_specific: true,
+    name: "androidx.camera.extensions.impl",
+    owner: "realme",
+    jars: ["proprietary/vendor/framework/androidx.camera.extensions.impl.jar"],
+    soc_specific: true,
 }
 
-// Unisoc telephony framework prebuilts
 java_import {
     name: "radio_interactor_common",
     jars: ["proprietary/system/framework/radio_interactor_common.jar"],
@@ -490,27 +604,14 @@ java_import {
 }
 
 java_import {
-    name: "unisoc-services", 
+    name: "unisoc-services",
     jars: ["proprietary/system/framework/unisoc-services.jar"],
     installable: true,
 }
 
 java_import {
-    name: "unisoc-framework", 
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    installable: true,
-}
-
-java_import {
-    name: "uni-telephony-common", 
-    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
-    installable: true,
-}
-
-
-java_import {
     name: "unisoc_ims_common",
-    jars: ["proprietary/system/framework/unisoc_ims_common.jar"], 
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
     installable: true,
 }
 
@@ -521,336 +622,332 @@ java_import {
 }
 
 java_import {
-    name: "unipnp-services", 
+    name: "unipnp-services",
     jars: ["proprietary/system/framework/unipnp-services.jar"],
     installable: true,
 }
 
-java_import {
-    name: "com.unisoc.sdk.common",
-    host_supported: false,
-    installable: false,
-    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+// =============================================
+// VINTF MANIFESTS (existing entries)
+// =============================================
+
+prebuilt_etc_xml {
+    name: "ai_engine-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/ai_engine-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "ai_engine-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/ai_engine-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.security.keymint@2.0-unisoc.service.trusty",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint@2.0-unisoc.service.trusty.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.security.keymint@2.0-unisoc.service.trusty",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint@2.0-unisoc.service.trusty.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.sensors-multihal",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.sensors-multihal",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.thermal@2.0-service",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.thermal@2.0-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.usb-service.example",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb-service.example.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.usb-service.example",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb-service.example.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.wifi.hostapd",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.wifi.hostapd",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.wifi.supplicant",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.wifi.supplicant",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "android.hardware.wifi@1.0-service",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.wifi@1.0-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "bluetooth_audio",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/bluetooth_audio.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "bluetooth_audio",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/bluetooth_audio.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "cplog_svc-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/cplog_svc-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "cplog_svc-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/cplog_svc-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "enhance-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/enhance-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "enhance-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/enhance-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "face-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/face-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "face-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/face-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "hdcp-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/hdcp-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "hdcp-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/hdcp-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "lights",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/lights.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "lights",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/lights.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "manifest_android.hardware.drm-service.widevine",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "manifest_android.hardware.drm-service.widevine",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "manifest_dualsim",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_dualsim.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "manifest_dualsim",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_dualsim.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "manifest_media_c2_V1_1_unisoc",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_1_unisoc.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "manifest_media_c2_V1_1_unisoc",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_1_unisoc.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "manifest_oplus_performance",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_oplus_performance.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "manifest_oplus_performance",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_oplus_performance.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "memtrack",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/memtrack.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "memtrack",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/memtrack.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "network-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/network-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "network-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/network-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "power.stats-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/power.stats-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "power.stats-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/power.stats-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "rebootescrow-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/rebootescrow-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "rebootescrow-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/rebootescrow-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "soter_default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/soter_default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "soter_default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/soter_default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "trusty-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/trusty-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "trusty-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/trusty-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "tui-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/tui-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "tui-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/tui-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor-fingerprintmmi-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor-fingerprintmmi-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor-fingerprintmmi-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor-fingerprintmmi-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor-log-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor-log-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor-log-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor-log-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor-oemlock-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor-oemlock-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor-oemlock-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor-oemlock-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor-power-default",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor-power-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor-power-default",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor-power-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor.sprd.hardware.boot@1.2",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.boot@1.2.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.sprd.hardware.boot@1.2",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.boot@1.2.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor.sprd.hardware.commondcs@1.0-service",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.commondcs@1.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.sprd.hardware.commondcs@1.0-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.commondcs@1.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor.sprd.hardware.gnss@2.2-service",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.gnss@2.2-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.sprd.hardware.gnss@2.2-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.gnss@2.2-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vendor.sprd.hardware.thermal@2.0-service",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.thermal@2.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.sprd.hardware.thermal@2.0-service",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.sprd.hardware.thermal@2.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "vibrator",
+    owner: "realme",
+    src: "proprietary/vendor/etc/vintf/manifest/vibrator.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vibrator",
-	owner: "realme",
-	src: "proprietary/vendor/etc/vintf/manifest/vibrator.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
+    name: "manifest_kernel",
+    owner: "realme",
+    src: "proprietary/odm/etc/vintf/manifest/manifest_kernel.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
 }
-
-prebuilt_etc_xml {
-	name: "manifest_kernel",
-	owner: "realme",
-	src: "proprietary/odm/etc/vintf/manifest/manifest_kernel.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	device_specific: true,
-}
-
 
 // =============================================
-// BOOT HAL (A/B UPDATES) - CRITICAL
+// BOOT HAL (A/B UPDATES)
 // =============================================
 
 cc_prebuilt_binary {
@@ -866,27 +963,3 @@ cc_prebuilt_binary {
     ],
     check_elf_files: false,
 }
-
-
-// =============================================
-// APNS
-// =============================================
-
-// APN configuration files - product specific
-// prebuilt_etc {
-//  name: "apns-conf.xml",
-//    owner: "realme", 
- //   src: "proprietary/product/etc/apns-conf.xml",
- //   filename_from_src: true,
- //   sub_dir: "etc",
-//}
-
-//prebuilt_etc {
-//    name: "old-apns-conf.xml", 
-//    owner: "realme",
-//    src: "proprietary/product/etc/old-apns-conf.xml",
- //   filename_from_src: true,
-  //  sub_dir: "etc",
-//}
-
-

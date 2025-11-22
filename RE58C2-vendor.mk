@@ -3621,7 +3621,11 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex
 
 # Unisoc telephony framework JARs (these contain the actual classes)
- PRODUCT_COPY_FILES += \
+# =============================================
+# PRODUCT_COPY_FILES - FRAMEWORK JARS (EXISTING)
+# =============================================
+
+PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/radio_interactor_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc_ims_common.jar \
@@ -3629,13 +3633,13 @@ PRODUCT_COPY_FILES += \
 
 # Unisoc PNP framework
 # PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system/framework/unipnp-features.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-features.jar \
-    vendor/realme/RE58C2/proprietary/system/framework/unipnp-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-services.jar
+#    vendor/realme/RE58C2/proprietary/system/framework/unipnp-features.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-features.jar \
+#    vendor/realme/RE58C2/proprietary/system/framework/unipnp-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-services.jar
 
 # Unisoc native libraries
 # PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
-    vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
+#    vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
+#    vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
 
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/boot-radio_interactor_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-radio_interactor_common.vdex \
@@ -3643,7 +3647,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc_ims_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc_ims_common.vdex \
     vendor/realme/RE58C2/proprietary/system/framework/boot-unipnp-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unipnp-framework.vdex
 
- PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar 
 
 PRODUCT_COPY_FILES += \
@@ -3651,18 +3655,74 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions) \
     $(call find-copy-subdir-files,*,vendor/realme/RE58C2/proprietary/system_ext/etc/permissions,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions) 
 
-
-
-
-
-
 # =============================================
-# OPTIMIZED PACKAGE LIST
+# DUAL LOCATION COPY - SYSTEM (PRIMARY) + SYSTEM_EXT (FALLBACK)
 # =============================================
 
-# ESSENTIAL - Telephony/Radio
+# SYSTEM LOCATION (Primary - where classloader looks first)
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/uni-telephony-common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-framework.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.unisoc.sdk.common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-res.apk:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-res.apk
+
+# SYSTEM_EXT LOCATION (Fallback - original location)
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uni-telephony-common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unisoc-framework.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.unisoc.sdk.common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-res.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unisoc-res.apk
+
+# PERMISSIONS - DUAL LOCATION
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.unisoc.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.phone.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.unisoc.phone.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.unisoc.sdk.common.xml
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.phone.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.phone.xml \
+    vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.sdk.common.xml
+
 # =============================================
-# PRODUCT_PACKAGES - MINIMAL ACTIVE CONFIGURATION
+# PRODUCT_PACKAGES - UNISOC TELEPHONY OVERRIDE
+# =============================================
+
+# UNISOC TELEPHONY OVERRIDE - DUAL LOCATION SUPPORT
+PRODUCT_PACKAGES += \
+    TeleService \
+    Telecom \
+    TelephonyProvider \
+    com.unisoc.xml \
+    com.unisoc.phone.xml \
+    com.unisoc.sdk.common.xml \
+    unisoc-framework \
+    uni-telephony-common \
+    com.unisoc.sdk.common
+
+# EXPLICITLY REMOVE AOSP TELEPHONY TO PREVENT CONFLICTS
+PRODUCT_PACKAGES -= \
+    com.android.phone \
+    com.android.server.telecom \
+    com.android.providers.telephony
+
+# FORCE OVERRIDE AOSP PACKAGES
+PRODUCT_OVERRIDES_PACKAGES += \
+    TeleService \
+    Telecom \
+    TelephonyProvider
+
+# =============================================
+# UNISOC TELEPHONY SERVICES
+# =============================================
+
+PRODUCT_PACKAGES += \
+    UniTelephony \
+    radio_interactor_service \
+    unisoc-services
+
+# =============================================
+# ESSENTIAL PACKAGES - MINIMAL ACTIVE CONFIGURATION
 # =============================================
 
 PRODUCT_PACKAGES += \
@@ -3677,20 +3737,28 @@ PRODUCT_PACKAGES += \
     UniWifiOverlay_Marlin3 \
     UniWifiDialog \
     ServiceUniWifiResources \
-    com.android.wifi 
+    com.android.wifi
 
- # Add UniSoc telephony packages
+# =============================================
+# DISABLE CONFLICTING AOSP TELEPHONY FEATURES
+# =============================================
 
+PRODUCT_PACKAGES -= \
+    CellBroadcastReceiver \
+    Stk
 
-PRODUCT_PACKAGES += \
-    UniTelephony \
-    radio_interactor_service \
-    unisoc-services
+# =============================================
+# UNISOC TELEPHONY CONFIGURATION
+# =============================================
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.radio.unisoc_support=1 \
+    ro.telephony.unisoc_integration=true
 
-   
-
-
+# ENSURES BOTH LOCATIONS ARE SCANNED FOR PERMISSIONS
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.permission_scan_paths=/system/etc/permissions:/system_ext/etc/permissions
+    
 # =============================================
 # REMOVED PACKAGES - COMMENTED OUT
 # =============================================
