@@ -602,20 +602,22 @@ dex_import {
 java_import {
     name: "radio_interactor_common",
     jars: ["proprietary/system/framework/radio_interactor_common.jar"],
-    installable: true,
+    installable: false,
+    prefer: true,
+}
+
+java_import {
+    name: "unisoc_ims_common", 
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
+    installable: false,
 }
 
 java_import {
     name: "unisoc-services",
-    jars: ["proprietary/system/framework/unisoc-services.jar"],
-    installable: true,
+    jars: ["proprietary/system/framework/unisoc-services.jar"], 
+    installable: false,
 }
 
-java_import {
-    name: "unisoc_ims_common",
-    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
-    installable: true,
-}
 
 java_import {
     name: "unipnp-features",
