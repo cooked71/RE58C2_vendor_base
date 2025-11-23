@@ -3754,11 +3754,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SYSTEM_SERVER_CLASSPATH += \
     framework/radio_interactor_common.jar \
-    framework/unisoc_ims_common.jar
+    framework/unisoc_ims_common.jar \
+    framework/unisoc-framework.jar \
+    framework/unisoc-services.jar
 
 PRODUCT_BOOTCLASSPATH += \
     system/framework/radio_interactor_common.jar \
-    system/framework/unisoc_ims_common.jar
+    system/framework/unisoc_ims_common.jar \
+    system/framework/unisoc-framework.jar \
+    system/framework/unisoc-services.jar
+
 
 
 
