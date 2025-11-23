@@ -3752,13 +3752,13 @@ PRODUCT_PACKAGES += \
 # UNISOC TELEPHONY CONFIGURATION
 # =============================================
 
-PRODUCT_SYSTEM_SERVER_CLASSPATH += \
+#PRODUCT_SYSTEM_SERVER_CLASSPATH += \
     framework/radio_interactor_common.jar \
     framework/unisoc_ims_common.jar \
     framework/unisoc-framework.jar \
     framework/unisoc-services.jar
 
-PRODUCT_BOOTCLASSPATH += \
+#PRODUCT_BOOTCLASSPATH += \
     system/framework/radio_interactor_common.jar \
     system/framework/unisoc_ims_common.jar \
     system/framework/unisoc-framework.jar \
