@@ -3688,9 +3688,6 @@ PRODUCT_COPY_FILES += \
 
 # UNISOC TELEPHONY OVERRIDE - DUAL LOCATION SUPPORT
 PRODUCT_PACKAGES += \
-    TeleService-unisoc \
-    Telecom-unisoc \
-    TelephonyProvider-unisoc \
     com.unisoc.xml \
     com.unisoc.phone.xml \
     com.unisoc.sdk.common.xml \
@@ -3758,6 +3755,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_SERVER_CLASSPATH += \
     framework/radio_interactor_common.jar \
     framework/unisoc_ims_common.jar
+
+PRODUCT_BOOTCLASSPATH += \
+    system/framework/radio_interactor_common.jar \
+    system/framework/unisoc_ims_common.jar
 
 
 
