@@ -3686,46 +3686,19 @@ PRODUCT_COPY_FILES += \
 # PRODUCT_PACKAGES - UNISOC TELEPHONY OVERRIDE
 # =============================================
 
-# UNISOC TELEPHONY OVERRIDE - DUAL LOCATION SUPPORT
+# UNISOC TELEPHONY - DUAL LOCATION SUPPORT
 PRODUCT_PACKAGES += \
-    com.unisoc.xml \
-    com.unisoc.phone.xml \
-    com.unisoc.sdk.common.xml \
     unisoc-framework \
     uni-telephony-common \
     com.unisoc.sdk.common
 
-# EXPLICITLY REMOVE AOSP TELEPHONY TO PREVENT CONFLICTS
-# PRODUCT_PACKAGES -= \
-    com.android.phone \
-    com.android.server.telecom \
-    com.android.providers.telephony
-
-# FORCE OVERRIDE AOSP PACKAGES
-# PRODUCT_OVERRIDES_PACKAGES += \
-    TeleService \
-    Telecom \
-    TelephonyProvider
-
-
-
-# =============================================
 # UNISOC TELEPHONY SERVICES
-# =============================================
-
 PRODUCT_PACKAGES += \
-    UniTelephony \
     radio_interactor_service \
     unisoc-services \
-    unisoc-res \
-    UnisocStk 
+    UnisocStk
 
-
-
-# =============================================
 # ESSENTIAL PACKAGES - MINIMAL ACTIVE CONFIGURATION
-# =============================================
-
 PRODUCT_PACKAGES += \
     LogManager \
     ProxyNFwLocation \
@@ -3733,39 +3706,41 @@ PRODUCT_PACKAGES += \
     SoterService \
     ims \
     AIEngineService \
-    OmacpPrebuilt \
-    AospWifiOverlay_Marlin3 \
-    UniWifiOverlay_Marlin3 \
-    UniWifiDialog \
-    ServiceUniWifiResources \
-    com.android.wifi
-
-# =============================================
-# DISABLE CONFLICTING AOSP TELEPHONY FEATURES
-# =============================================
-
-#PRODUCT_PACKAGES -= \
-    CellBroadcastReceiver \
-    Stk
+    OmacpPrebuilt
 
 # =============================================
 # UNISOC TELEPHONY CONFIGURATION
 # =============================================
 
-#PRODUCT_SYSTEM_SERVER_CLASSPATH += \
-    framework/radio_interactor_common.jar \
-    framework/unisoc_ims_common.jar \
-    framework/unisoc-framework.jar \
-    framework/unisoc-services.jar
+# EXPLICITLY REMOVE AOSP TELEPHONY TO PREVENT CONFLICTS
+# PRODUCT_PACKAGES -= \
+#     com.android.phone \
+#     com.android.server.telecom \
+#     com.android.providers.telephony
 
-#PRODUCT_BOOTCLASSPATH += \
-    system/framework/radio_interactor_common.jar \
-    system/framework/unisoc_ims_common.jar \
-    system/framework/unisoc-framework.jar \
-    system/framework/unisoc-services.jar
+# FORCE OVERRIDE AOSP PACKAGES  
+# PRODUCT_OVERRIDES_PACKAGES += \
+#     TeleService \
+#     Telecom \
+#     TelephonyProvider
 
+# DISABLE CONFLICTING AOSP TELEPHONY FEATURES
+# PRODUCT_PACKAGES -= \
+#     CellBroadcastReceiver \
+#     Stk
 
+# BROKEN BOOTCLASSPATH CONFIGURATION (DO NOT USE)
+# PRODUCT_SYSTEM_SERVER_CLASSPATH += \
+#     framework/radio_interactor_common.jar \
+#     framework/unisoc_ims_common.jar \
+#     framework/unisoc-framework.jar \
+#     framework/unisoc-services.jar
 
+# PRODUCT_BOOTCLASSPATH += \
+#     system/framework/radio_interactor_common.jar \
+#     system/framework/unisoc_ims_common.jar \
+#     system/framework/unisoc-framework.jar \
+#     system/framework/unisoc-services.jar
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.radio.unisoc_support=1 \
@@ -3774,7 +3749,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # ENSURES BOTH LOCATIONS ARE SCANNED FOR PERMISSIONS
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.permission_scan_paths=/system/etc/permissions:/system_ext/etc/permissions
-    
+        
 # =============================================
 # REMOVED PACKAGES - COMMENTED OUT
 # =============================================

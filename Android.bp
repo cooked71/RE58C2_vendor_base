@@ -448,66 +448,6 @@ android_app_import {
     product_specific: true,
 }
 
-// =============================================
-// UNISOC FRAMEWORK JARS - DUAL LOCATION SUPPORT
-// =============================================
-
-// Primary framework imports for app dependencies
-java_import {
-    name: "unisoc-framework",
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    installable: false,
-}
-
-java_import {
-    name: "uni-telephony-common",
-    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
-    installable: false,
-}
-
-java_import {
-    name: "com.unisoc.sdk.common",
-    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
-    installable: false,
-}
-
-// System framework jars (will be copied to /system/framework/)
-java_import {
-    name: "unisoc-framework-system",
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    installable: true,
-}
-
-java_import {
-    name: "uni-telephony-common-system",
-    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
-    installable: true,
-}
-
-java_import {
-    name: "com.unisoc.sdk.common-system",
-    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
-    installable: true,
-}
-
-// System_ext framework jars (original location)
-java_import {
-    name: "unisoc-framework-system_ext",
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    installable: false,
-}
-
-java_import {
-    name: "uni-telephony-common-system_ext",
-    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
-    installable: false,
-}
-
-java_import {
-    name: "com.unisoc.sdk.common-system_ext",
-    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
-    installable: false,
-}
 
 // =============================================
 // FRAMEWORK RESOURCES
@@ -599,37 +539,54 @@ dex_import {
     soc_specific: true,
 }
 
-java_import {
+// =============================================
+// UNISOC FRAMEWORK JARS - WITH PROPER OWNER
+// =============================================
+
+// System framework jars (in /system/framework/)
+dex_import {
     name: "radio_interactor_common",
-    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
-    installable: false,
-    prefer: true,
+    jars: ["vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar"],
+    owner: "realme",
+    soc_specific: true,
 }
 
-java_import {
+dex_import {
     name: "unisoc_ims_common", 
-    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
-    installable: false,
+    jars: ["vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar"],
+    owner: "realme",
+    soc_specific: true,
 }
 
-java_import {
+dex_import {
     name: "unisoc-services",
-    jars: ["proprietary/system/framework/unisoc-services.jar"], 
-    installable: false,
+    jars: ["vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar"],
+    owner: "realme",
+    soc_specific: true,
 }
 
-
-java_import {
-    name: "unipnp-features",
-    jars: ["proprietary/system/framework/unipnp-features.jar"],
-    installable: true,
+// System_ext framework jars (in /system_ext/framework/)
+dex_import {
+    name: "unisoc-framework",
+    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar"],
+    owner: "realme",
+    soc_specific: true,
 }
 
-java_import {
-    name: "unipnp-services",
-    jars: ["proprietary/system/framework/unipnp-services.jar"],
-    installable: true,
+dex_import {
+    name: "com.unisoc.sdk.common",
+    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+    owner: "realme",
+    soc_specific: true,
 }
+
+dex_import {
+    name: "uni-telephony-common",
+    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar"],
+    owner: "realme",
+    soc_specific: true,
+}
+
 
 // =============================================
 // VINTF MANIFESTS (existing entries)
