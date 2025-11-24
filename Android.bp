@@ -519,7 +519,6 @@ dex_import {
 
 }
 
-<<<<<<< HEAD
 // dex_import {
 //     name: " ", 
 //     jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
