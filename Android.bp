@@ -519,13 +519,18 @@ dex_import {
 
 }
 
-dex_import {
-    name: "unisoc_ims_common", 
-    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
-    owner: "realme",
-    soc_specific: true,
-}
+<<<<<<< HEAD
+// dex_import {
+//     name: " ", 
+//     jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
+//     owner: "realme",
+//     soc_specific: true,
+//     dex_preopt: {
+//         enabled: false, 
+//     },
 
+// }
+// 
 dex_import {
     name: "unisoc-services",
     jars: ["proprietary/system/framework/unisoc-services.jar"],
