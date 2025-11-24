@@ -516,6 +516,7 @@ dex_import {
     jars: ["proprietary/system/framework/radio_interactor_common.jar"],
     owner: "realme",
     soc_specific: true,
+
 }
 
 dex_import {
@@ -523,6 +524,10 @@ dex_import {
     jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
     owner: "realme",
     soc_specific: true,
+    dex_preopt: {
+        enabled: false, 
+    },
+
 }
 
 dex_import {
