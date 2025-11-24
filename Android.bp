@@ -546,21 +546,21 @@ dex_import {
 // System framework jars (in /system/framework/)
 dex_import {
     name: "radio_interactor_common",
-    jars: ["vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar"],
+    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
     owner: "realme",
     soc_specific: true,
 }
 
 dex_import {
     name: "unisoc_ims_common", 
-    jars: ["vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar"],
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
     owner: "realme",
     soc_specific: true,
 }
 
 dex_import {
     name: "unisoc-services",
-    jars: ["vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar"],
+    jars: ["proprietary/system/framework/unisoc-services.jar"],
     owner: "realme",
     soc_specific: true,
 }
@@ -568,21 +568,21 @@ dex_import {
 // System_ext framework jars (in /system_ext/framework/)
 dex_import {
     name: "unisoc-framework",
-    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar"],
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
     owner: "realme",
     soc_specific: true,
 }
 
 dex_import {
     name: "com.unisoc.sdk.common",
-    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
+    jars: ["proprietary/system_ext/framework/com.unisoc.sdk.common.jar"],
     owner: "realme",
     soc_specific: true,
 }
 
 dex_import {
     name: "uni-telephony-common",
-    jars: ["vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar"],
+    jars: ["proprietary/system_ext/framework/uni-telephony-common.jar"],
     owner: "realme",
     soc_specific: true,
 }
