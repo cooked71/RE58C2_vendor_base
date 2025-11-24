@@ -74,36 +74,6 @@ android_app_import {
 // UNISOC TELEPHONY APPS - UPDATED WITH CORRECT DEPENDENCIES
 // =============================================
 
-android_app_import {
-    name: "TeleService-unisoc",
-    owner: "realme",
-    apk: "proprietary/system/priv-app/TeleService/TeleService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    uses_libs: [
-        "com.unisoc.sdk.common",
-        "uni-telephony-common",
-    ],
-}
-
-android_app_import {
-    name: "Telecom-unisoc",
-    owner: "realme",
-    apk: "proprietary/system/priv-app/Telecom/Telecom.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    uses_libs: [
-        "com.unisoc.sdk.common",
-        "unisoc-framework",
-        "uni-telephony-common",
-    ],
-}
 
 android_app_import {
     name: "TelephonyProvider-unisoc",
@@ -203,10 +173,7 @@ android_app_import {
     },
     privileged: true,
     system_ext_specific: true,
-    uses_libs: [
-        "com.unisoc.sdk.common",
-        "unisoc-framework",
-    ],
+    
 }
 
 // System Providers
