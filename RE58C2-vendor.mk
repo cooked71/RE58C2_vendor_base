@@ -3687,13 +3687,13 @@ PRODUCT_COPY_FILES += \
 # =============================================
 
 # UNISOC TELEPHONY - DUAL LOCATION SUPPORT
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     unisoc-framework \
     uni-telephony-common \
     com.unisoc.sdk.common
 
 # UNISOC TELEPHONY SERVICES
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     radio_interactor_service \
     unisoc-services \
     UnisocStk
@@ -3704,9 +3704,11 @@ PRODUCT_PACKAGES += \
     ProxyNFwLocation \
     UASetting \
     SoterService \
-    ims \
     AIEngineService \
     OmacpPrebuilt
+
+#    ims \
+
 
 # =============================================
 # UNISOC TELEPHONY CONFIGURATION
