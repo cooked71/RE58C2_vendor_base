@@ -3704,9 +3704,11 @@ PRODUCT_PACKAGES += \
     ProxyNFwLocation \
     UASetting \
     SoterService \
-    ims \
     AIEngineService \
     OmacpPrebuilt
+
+#    ims \
+
 
 # =============================================
 # UNISOC TELEPHONY CONFIGURATION
