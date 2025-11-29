@@ -263,19 +263,6 @@ android_app_import {
     system_ext_specific: true,
 }
 
-// Setup & Provisioning
-android_app_import {
-    name: "SetupWizard",
-    owner: "realme",
-    apk: "proprietary/system_ext/priv-app/SetupWizard/SetupWizard.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
 android_app_import {
     name: "RemoteProvisioner",
     owner: "realme",
