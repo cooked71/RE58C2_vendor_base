@@ -3555,6 +3555,27 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/libdrm.so:vendor/lib/libdrm.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libdrm.so:vendor/lib64/libdrm.so
 
+
+
+# Camera fix for RE58C2
+# Include this in your device.mk
+
+# Camera provider implementations
+PRODUCT_COPY_FILES += \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-external-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-external-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.provider@2.4-external-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-external-sprd.so
+
+# Camera device libraries
+PRODUCT_COPY_FILES += \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.6.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@3.6.so
+
+
+
 # =============================================
 # PRODUCT_PACKAGES - UNISOC TELEPHONY OVERRIDE
 # =============================================
