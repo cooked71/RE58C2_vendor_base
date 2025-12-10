@@ -3395,7 +3395,6 @@ PRODUCT_COPY_FILES += \
 
 # Critical missing libraries
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediahdrtosdrtransform.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/libmediahdrtosdrtransform.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediahdrtosdrtransform.so
 
@@ -3445,12 +3444,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/lib/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.sprd.hardware.hdcp@1.0.so \
     vendor/realme/RE58C2/proprietary/system_ext/lib/vendor.sprd.hardware.hdcp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.sprd.hardware.hdcp@1.0.so 
 
-
-PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
-    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so
-
-
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so \
@@ -3458,8 +3451,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss.measurement_corrections@1.1.so 
 
 PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so  \
-    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@2.1.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss@2.1.so 
 
@@ -3483,19 +3474,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unisoc-framework.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uni-telephony-common.jar
 
-# Unisoc OAT Files - ARM64
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm64/com.unisoc.sdk.common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.unisoc.sdk.common.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm64/com.unisoc.sdk.common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.unisoc.sdk.common.vdex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm64/uni-telephony-common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/uni-telephony-common.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm64/uni-telephony-common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/uni-telephony-common.vdex
-
-# Unisoc OAT Files - ARM (32-bit)
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm/com.unisoc.sdk.common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.unisoc.sdk.common.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm/com.unisoc.sdk.common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.unisoc.sdk.common.vdex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm/uni-telephony-common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/uni-telephony-common.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/oat/arm/uni-telephony-common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/uni-telephony-common.vdex
 
 # AIEngineService
 PRODUCT_COPY_FILES += \
@@ -3503,124 +3481,17 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/AIEngineService/lib/arm64/libtextclassifier_hash_prebuilt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/AIEngineService/lib/arm64/libtextclassifier_hash_prebuilt.so \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/AIEngineService/lib/arm64/libtflite_prebuilt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/AIEngineService/lib/arm64/libtflite_prebuilt.so
 
-# CarrierConfig
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/CarrierConfig/oat/arm64/CarrierConfig.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/CarrierConfig/oat/arm64/CarrierConfig.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/CarrierConfig/oat/arm64/CarrierConfig.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/CarrierConfig/oat/arm64/CarrierConfig.vdex
-
-# EmergencyInfoGms
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfoGms/oat/arm64/EmergencyInfoGms.vdex
-
 
 # ims
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/ims/lib/arm64/libn3am_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/lib/arm64/libn3am_jni.so 
     
-    #vendor/realme/RE58C2/proprietary/system_ext/priv-app/ims/oat/arm64/ims.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/oat/arm64/ims.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/ims/oat/arm64/ims.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/oat/arm64/ims.vdex
-
-# NetworkSliceAgent
-# No non-APK files found
-
-# OmacpPrebuilt
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/OmacpPrebuilt/oat/arm64/OmacpPrebuilt.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/OmacpPrebuilt/oat/arm64/OmacpPrebuilt.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/OmacpPrebuilt/oat/arm64/OmacpPrebuilt.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/OmacpPrebuilt/oat/arm64/OmacpPrebuilt.vdex
-
-# PowerSaveModeLauncherPrebuilt
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/PowerSaveModeLauncherPrebuilt/oat/arm64/PowerSaveModeLauncherPrebuilt.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/PowerSaveModeLauncherPrebuilt/oat/arm64/PowerSaveModeLauncherPrebuilt.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/PowerSaveModeLauncherPrebuilt/oat/arm64/PowerSaveModeLauncherPrebuilt.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/PowerSaveModeLauncherPrebuilt/oat/arm64/PowerSaveModeLauncherPrebuilt.vdex
-
-# QuickAccessWallet
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/QuickAccessWallet/oat/arm64/QuickAccessWallet.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QuickAccessWallet/oat/arm64/QuickAccessWallet.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/QuickAccessWallet/oat/arm64/QuickAccessWallet.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QuickAccessWallet/oat/arm64/QuickAccessWallet.vdex
-
-# radio_interactor_service
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/radio_interactor_service/oat/arm64/radio_interactor_service.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/radio_interactor_service/oat/arm64/radio_interactor_service.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/radio_interactor_service/oat/arm64/radio_interactor_service.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/radio_interactor_service/oat/arm64/radio_interactor_service.vdex
-
-# realme/AppHub
-# No non-APK files found
-
-# realme/GlobalSearch
-# No non-APK files found
-
-# RemoteProvisioner
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.vdex
 
 # SearchLauncherQuickStep
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/SearchLauncherQuickStep/lib/arm64/libsqlite3ext.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SearchLauncherQuickStep/lib/arm64/libsqlite3ext.so \
     vendor/realme/RE58C2/proprietary/system_ext/priv-app/SearchLauncherQuickStep/lib/arm64/libsqlite3x.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SearchLauncherQuickStep/lib/arm64/libsqlite3x.so 
     
-    #vendor/realme/RE58C2/proprietary/system_ext/priv-app/SearchLauncherQuickStep/oat/arm64/SearchLauncherQuickStep.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SearchLauncherQuickStep/oat/arm64/SearchLauncherQuickStep.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SearchLauncherQuickStep/oat/arm64/SearchLauncherQuickStep.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SearchLauncherQuickStep/oat/arm64/SearchLauncherQuickStep.vdex
-
-# ServiceUniWifiResources
-# No non-APK files found
-
-# Settings
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/Settings/oat/arm64/Settings.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Settings/oat/arm64/Settings.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/Settings/oat/arm64/Settings.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Settings/oat/arm64/Settings.vdex
-
-# SetupWizard
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SetupWizard/SetupWizard.apk.prof:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/SetupWizard.apk.prof \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SetupWizard/oat/arm64/SetupWizard.art:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/oat/arm64/SetupWizard.art \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SetupWizard/oat/arm64/SetupWizard.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/oat/arm64/SetupWizard.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SetupWizard/oat/arm64/SetupWizard.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/oat/arm64/SetupWizard.vdex
-
-# SprdCalendarProviderPrebuilt
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SprdCalendarProviderPrebuilt/oat/arm64/SprdCalendarProviderPrebuilt.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SprdCalendarProviderPrebuilt/oat/arm64/SprdCalendarProviderPrebuilt.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SprdCalendarProviderPrebuilt/oat/arm64/SprdCalendarProviderPrebuilt.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SprdCalendarProviderPrebuilt/oat/arm64/SprdCalendarProviderPrebuilt.vdex
-
-# SprdContactsProvider
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SprdContactsProvider/oat/arm64/SprdContactsProvider.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SprdContactsProvider/oat/arm64/SprdContactsProvider.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SprdContactsProvider/oat/arm64/SprdContactsProvider.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SprdContactsProvider/oat/arm64/SprdContactsProvider.vdex
-
-# Srmi
-# No non-APK files found
-
-# StorageManager
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/StorageManager/oat/arm64/StorageManager.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/StorageManager/oat/arm64/StorageManager.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/StorageManager/oat/arm64/StorageManager.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/StorageManager/oat/arm64/StorageManager.vdex
-
-# SystemUI
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SystemUI/oat/arm64/SystemUI.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SystemUI/oat/arm64/SystemUI.vdex
-
-# ThemePicker.7z
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/ThemePicker.7z:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ThemePicker.7z
-
-# UniTelephony
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/UniTelephony/oat/arm64/UniTelephony.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/UniTelephony/oat/arm64/UniTelephony.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/UniTelephony/oat/arm64/UniTelephony.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/UniTelephony/oat/arm64/UniTelephony.vdex
-
-# UniWifiDialog
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/UniWifiDialog/oat/arm64/UniWifiDialog.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/UniWifiDialog/oat/arm64/UniWifiDialog.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/UniWifiDialog/oat/arm64/UniWifiDialog.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/UniWifiDialog/oat/arm64/UniWifiDialog.vdex
-
-# WallpaperCropper
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex \
-    vendor/realme/RE58C2/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex
-
-# Unisoc telephony framework JARs (these contain the actual classes)
 # =============================================
 # PRODUCT_COPY_FILES - FRAMEWORK JARS (EXISTING)
 # =============================================
@@ -3631,21 +3502,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc_ims_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/ims-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/ims-common.jar
 
-# Unisoc PNP framework
-# PRODUCT_COPY_FILES += \
-#    vendor/realme/RE58C2/proprietary/system/framework/unipnp-features.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-features.jar \
-#    vendor/realme/RE58C2/proprietary/system/framework/unipnp-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unipnp-services.jar
-
-# Unisoc native libraries
-# PRODUCT_COPY_FILES += \
-#    vendor/realme/RE58C2/proprietary/system/lib/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsprdssense.so \
-#    vendor/realme/RE58C2/proprietary/system/lib64/libsprdssense.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsprdssense.so
-
-#PRODUCT_COPY_FILES += \
-    vendor/realme/RE58C2/proprietary/system/framework/boot-radio_interactor_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-radio_interactor_common.vdex \
-    vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc-framework.vdex \
-    vendor/realme/RE58C2/proprietary/system/framework/boot-unisoc_ims_common.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unisoc_ims_common.vdex \
-    vendor/realme/RE58C2/proprietary/system/framework/boot-unipnp-framework.vdex:$(TARGET_COPY_OUT_SYSTEM)/framework/boot-unipnp-framework.vdex
 
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar 
@@ -3682,6 +3538,23 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.phone.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.phone.xml \
     vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.sdk.common.xml
 
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/libunisocvold.so:system_ext/lib64/libunisocvold.so \
+    vendor/realme/RE58C2/proprietary/system_ext/lib/libphoenix_native.so:system_ext/lib/libphoenix_native.so \
+    vendor/realme/RE58C2/proprietary/system_ext/lib64/libphoenix_native.so:system_ext/lib64/libphoenix_native.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/libdiskconfig.so:system/lib64/libdiskconfig.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/libcrypto_utils.so:system/lib64/libcrypto_utils.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.security.maintenance-ndk.so:system/lib64/android.security.maintenance-ndk.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/libkeymint_support.so:system/lib64/libkeymint_support.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.hardware.health.storage-V1-ndk.so:system/lib64/android.hardware.health.storage-V1-ndk.so \
+    vendor/realme/RE58C2/proprietary/system/lib64/android.system.keystore2-V2-ndk.so:system/lib64/android.system.keystore2-V2-ndk.so \
+    vendor/realme/RE58C2/proprietary/system/bin/sdcard:system/bin/sdcard \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-arm.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/libdrm.so:vendor/lib/libdrm.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/libdrm.so:vendor/lib64/libdrm.so
+
 # =============================================
 # PRODUCT_PACKAGES - UNISOC TELEPHONY OVERRIDE
 # =============================================
@@ -3705,44 +3578,9 @@ PRODUCT_PACKAGES += \
     UASetting \
     SoterService \
     AIEngineService \
-    OmacpPrebuilt
+    OmacpPrebuilt \
+    ims 
 
-#    ims \
-
-
-# =============================================
-# UNISOC TELEPHONY CONFIGURATION
-# =============================================
-
-# EXPLICITLY REMOVE AOSP TELEPHONY TO PREVENT CONFLICTS
-# PRODUCT_PACKAGES -= \
-#     com.android.phone \
-#     com.android.server.telecom \
-#     com.android.providers.telephony
-
-# FORCE OVERRIDE AOSP PACKAGES  
-# PRODUCT_OVERRIDES_PACKAGES += \
-#     TeleService \
-#     Telecom \
-#     TelephonyProvider
-
-# DISABLE CONFLICTING AOSP TELEPHONY FEATURES
-# PRODUCT_PACKAGES -= \
-#     CellBroadcastReceiver \
-#     Stk
-
-# BROKEN BOOTCLASSPATH CONFIGURATION (DO NOT USE)
-# PRODUCT_SYSTEM_SERVER_CLASSPATH += \
-#     framework/radio_interactor_common.jar \
-#     framework/unisoc_ims_common.jar \
-#     framework/unisoc-framework.jar \
-#     framework/unisoc-services.jar
-
-# PRODUCT_BOOTCLASSPATH += \
-#     system/framework/radio_interactor_common.jar \
-#     system/framework/unisoc_ims_common.jar \
-#     system/framework/unisoc-framework.jar \
-#     system/framework/unisoc-services.jar
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.radio.unisoc_support=1 \
