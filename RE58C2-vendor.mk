@@ -3562,17 +3562,22 @@ PRODUCT_COPY_FILES += \
 
 # Camera provider implementations
 PRODUCT_COPY_FILES += \\
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so \\
-    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy-sprd.so \\
-    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so \\
-    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so \\
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-external-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-external-sprd.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy-sprd.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-external-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-external-sprd.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.provider@2.4-external-sprd.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-external-sprd.so
 
 # Camera device libraries
 PRODUCT_COPY_FILES += \\
-    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.6.so \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.6.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@3.6.so
+
+#sensors fix 
+PRODUCT_COPY_FILES += \\
+    vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.sensors@2.X-sprd_subhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.X-sprd_subhal.so \
+    vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.sensors@2.X-sprd_subhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.X-sprd_subhal.so
 
 
 
