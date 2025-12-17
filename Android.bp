@@ -893,7 +893,7 @@ cc_prebuilt_binary {
 // IMS Service Entitlement APK
 android_app_import {
     name: "ImsServiceEntitlement",
-    apk: ["proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk"],
+    apk: "proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
