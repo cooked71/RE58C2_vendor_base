@@ -3579,6 +3579,11 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/vendor/lib64/android.hardware.sensors@2.X-sprd_subhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.X-sprd_subhal.so \
     vendor/realme/RE58C2/proprietary/vendor/lib/android.hardware.sensors@2.X-sprd_subhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.X-sprd_subhal.so
 
+PRODUCT_COPY_FILES += \
+   vendor/realme/RE58C2/proprietary/system_ext/bin/ims_bridged:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/ims_bridged \
+   vendor/realme/RE58C2/proprietary/system_ext/etc/init/ims_bridged.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/ims_bridged.rc \
+   vendor/realme/RE58C2/proprietary/system_ext/lib/libimsbrd.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libimsbrd.so \
+   vendor/realme/RE58C2/proprietary/system_ext/lib64/libimsbrd.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsbrd.so 
 
 
 # =============================================
@@ -3605,6 +3610,7 @@ PRODUCT_PACKAGES += \
     SoterService \
     AIEngineService \
     OmacpPrebuilt \
+    ImsServiceEntitlement \
     ims 
 
 

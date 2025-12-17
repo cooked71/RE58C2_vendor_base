@@ -883,3 +883,23 @@ cc_prebuilt_binary {
     ],
     check_elf_files: false,
 }
+
+// =============================================
+// IMS TEST
+// =============================================
+
+
+
+// IMS Service Entitlement APK
+android_app_import {
+    name: "ImsServiceEntitlement",
+    apk: ["proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk"],
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+
