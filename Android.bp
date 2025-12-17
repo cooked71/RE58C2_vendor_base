@@ -915,3 +915,20 @@ android_app_import {
 }
 
 
+java_library {
+    name: "framework-unisoc-ims",
+    srcs: ["proprietary/unisoc_ims_common/com.android.ims.internal/**/*.java"],
+    
+    # CRITICAL: system_current makes it a system framework jar
+    sdk_version: "system_current",
+    
+    # CRITICAL: This makes it installable to /system/framework
+    installable: true,
+    
+    # CRITICAL: Visibility to system services
+    visibility: [
+        "//frameworks/base",
+        "//system/apex",
+        "//system/extras",
+    ],
+}

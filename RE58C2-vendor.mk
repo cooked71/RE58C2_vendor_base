@@ -3596,11 +3596,13 @@ PRODUCT_COPY_FILES += \
     uni-telephony-common \
     com.unisoc.sdk.common
 
-# UNISOC TELEPHONY SERVICES
-#PRODUCT_PACKAGES += \
-    radio_interactor_service \
-    unisoc-services \
-    UnisocStk
+# Add to system framework jars
+PRODUCT_PACKAGES += \
+    framework-unisoc-ims
+
+# Add to bootclasspath
+PRODUCT_BOOT_JARS += \
+    framework-unisoc-ims
 
 # ESSENTIAL PACKAGES - MINIMAL ACTIVE CONFIGURATION
 PRODUCT_PACKAGES += \
