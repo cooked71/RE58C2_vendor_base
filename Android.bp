@@ -918,24 +918,20 @@ android_app_import {
 
 java_library {
     name: "framework-unisoc-ims",
-    
     srcs: [
-        "proprietary/unisoc_ims_common/com.android.ims.internal/**/*.java",
-        "proprietary/unisoc-framework/com.android.ims.internal/**/*.java",
-        "proprietary/unisoc-framework/android.telephony/**/*.java",
-        "proprietary/unisoc-framework/com.android.internal.telephony/**/*.java",
+        "proprietary/unisoc_ims_common/com_android_ims_internal/**/*.java",
+        "proprietary/unisoc-framework/com_android_ims_internal/**/*.java",
+        "proprietary/unisoc-framework/android_telephony/**/*.java",
+        "proprietary/unisoc-framework/com_android_internal_telephony/**/*.java",
     ],
-    
     sdk_version: "core_platform",
     installable: true,
-    
-    libs: [
+       libs: [
         "framework",
         "ims-common",
         "telephony-common",
     ],
-    
-    visibility: [
+        visibility: [
         "//frameworks/base",
         "//system/apex", 
         "//system/extras",
