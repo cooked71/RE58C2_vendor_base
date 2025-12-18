@@ -3472,7 +3472,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/smartlink_sdk.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/smartlink_sdk.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unipnp-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unipnp-framework.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unisoc-framework.jar \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uni-telephony-common.jar
+    vendor/realme/RE58C2/proprietary/system/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/uni-telephony-common.jar
 
 
 # AIEngineService
