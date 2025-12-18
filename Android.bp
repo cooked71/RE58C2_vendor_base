@@ -920,12 +920,15 @@ java_library {
     name: "framework-unisoc-ims",
     
     srcs: [
-        // Only IMS extensions - minimal set
-        "proprietary/unisoc_ims_common/com/android/ims/internal/**/*.java",
+        // Core IMS extensions (no telephony dependencies)
+        "proprietary/unisoc_ims_common/com/android/ims/internal/*.java",
         
-        // Required Unisoc telephony classes for IMS
-        "proprietary/unisoc-framework/android/telephony/*.java",
+        // Minimal telephony files needed
         "proprietary/unisoc-framework/com/android/ims/internal/ImsCallForwardInfoEx.java",
+        "proprietary/unisoc-framework/android/telephony/UniCarrierConfigManager.java",
+        "proprietary/unisoc-framework/android/telephony/UniSettings.java",
+        "proprietary/unisoc-framework/com/android/internal/telephony/IUniCarrierConfigLoader.java",
+        "proprietary/unisoc-framework/com/android/internal/telephony/IUniTelephony.java",
     ],
     
     sdk_version: "core_platform",
