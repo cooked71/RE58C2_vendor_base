@@ -191,11 +191,11 @@ public class ImsManagerEx {
     }
 
     public static boolean isVolteEnabledByPlatform(Context context) {
-        return context != null && context.getResources().getBoolean(R.bool.config_cecSystemAudioControlEnabled_allowed) && getBooleanCarrierConfig("carrier_volte_available_bool", context) && SystemProperties.getBoolean("persist.vendor.sys.volte.enable", false);
+        return context != null && true && getBooleanCarrierConfig("carrier_volte_available_bool", context) && SystemProperties.getBoolean("persist.vendor.sys.volte.enable", false);
     }
 
     public static boolean isWfcEnabledByPlatform(Context context) {
-        return context != null && context.getResources().getBoolean(R.bool.config_cecSystemAudioControl_userConfigurable) && getBooleanCarrierConfig("carrier_wfc_ims_available_bool", context);
+        return context != null && true && getBooleanCarrierConfig("carrier_wfc_ims_available_bool", context);
     }
 
     public static boolean isWfcEnabledByUser(Context context) {
