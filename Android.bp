@@ -918,23 +918,27 @@ android_app_import {
 
 java_library {
     name: "framework-unisoc-ims",
-    srcs: ["proprietary/unisoc_ims_common/com.android.ims.internal/**/*.java"],
     
-    // CRITICAL CHANGE: Use "core_platform" instead of "system_current".
-    // This makes internal AOSP APIs (e.g., IccUtils, IImsUt) visible.
-    sdk_version: "core_platform",
-    
-    installable: true,
-    visibility: [
-        "//frameworks/base",
-        "//system/apex",
-        "//system/extras",
-        "//vendor/realme/RE58C2",
+    srcs: [
+        "proprietary/unisoc_ims_common/com.android.ims.internal/**/*.java",
+        "proprietary/unisoc-framework/com.android.ims.internal/**/*.java",
+        "proprietary/unisoc-framework/android.telephony/**/*.java",
+        "proprietary/unisoc-framework/com.android.internal.telephony/**/*.java",
     ],
     
-    // Explicitly depend on the core framework where internal APIs reside.
+    sdk_version: "core_platform",
+    installable: true,
+    
     libs: [
-        "framework", 
+        "framework",
         "ims-common",
+        "telephony-common",
+    ],
+    
+    visibility: [
+        "//frameworks/base",
+        "//system/apex", 
+        "//system/extras",
+        "//vendor/realme/RE58C2",
     ],
 }
