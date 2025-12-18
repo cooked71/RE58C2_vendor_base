@@ -697,8 +697,8 @@ public class UniGsmAlphabet {
 
     private static void enableCountrySpecificEncodings() {
         Resources r = Resources.getSystem();
-        sEnabledSingleShiftTables = r.getIntArray(R.array.config_reduceBrightColorsCoefficients);
-        sEnabledLockingShiftTables = r.getIntArray(R.array.config_rearDisplayDeviceStates);
+        sEnabledSingleShiftTables = new int[0];
+        sEnabledLockingShiftTables = new int[0];
         int[] iArr = sEnabledSingleShiftTables;
         if (iArr.length > 0) {
             sHighestEnabledSingleShiftCode = iArr[iArr.length - 1];

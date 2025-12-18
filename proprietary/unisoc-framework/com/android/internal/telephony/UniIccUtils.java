@@ -86,7 +86,7 @@ public class UniIccUtils {
         Resources resource = Resources.getSystem();
         String defaultCharset = "";
         try {
-            defaultCharset = resource.getString(R.string.heavy_weight_notification_detail);
+            defaultCharset = "";
         } catch (Resources.NotFoundException e) {
         }
         return GsmAlphabet.gsm8BitUnpackedToString(data, offset, length, defaultCharset.trim());
