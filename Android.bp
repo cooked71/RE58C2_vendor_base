@@ -916,34 +916,34 @@ android_app_import {
 
 
 
-java_library {
-    name: "framework-unisoc-ims",
+//     java_library {
+//     name: "framework-unisoc-ims",
     
-    srcs: [
-        // Core IMS extensions (no telephony dependencies)
-        "proprietary/unisoc_ims_common/com/android/ims/internal/*.java",
+//     srcs: [
+//         // Core IMS extensions (no telephony dependencies)
+//         "proprietary/unisoc_ims_common/com/android/ims/internal/*.java",
         
-        // Minimal telephony files needed
-        "proprietary/unisoc-framework/com/android/ims/internal/ImsCallForwardInfoEx.java",
-        "proprietary/unisoc-framework/android/telephony/UniCarrierConfigManager.java",
-        "proprietary/unisoc-framework/android/telephony/UniSettings.java",
-        "proprietary/unisoc-framework/com/android/internal/telephony/IUniCarrierConfigLoader.java",
-        "proprietary/unisoc-framework/com/android/internal/telephony/IUniTelephony.java",
-    ],
+//         // Minimal telephony files needed
+//         "proprietary/unisoc-framework/com/android/ims/internal/ImsCallForwardInfoEx.java",
+//         "proprietary/unisoc-framework/android/telephony/UniCarrierConfigManager.java",
+//         "proprietary/unisoc-framework/android/telephony/UniSettings.java",
+//         "proprietary/unisoc-framework/com/android/internal/telephony/IUniCarrierConfigLoader.java",
+//         "proprietary/unisoc-framework/com/android/internal/telephony/IUniTelephony.java",
+//     ],
     
-    sdk_version: "core_platform",
-    installable: true,
+//     sdk_version: "core_platform",
+//     installable: true,
     
-    libs: [
-        "framework",
-        "ims-common",
-        "telephony-common",
-    ],
+//     libs: [
+//         "framework",
+//         "ims-common",
+//         "telephony-common",
+//     ],
     
-    visibility: [
-        "//frameworks/base",
-        "//system/apex", 
-        "//system/extras",
-        "//vendor/realme/RE58C2",
-    ],
-}
+//     visibility: [
+//         "//frameworks/base",
+//         "//system/apex", 
+//         "//system/extras",
+//         "//vendor/realme/RE58C2",
+//     ],
+// }

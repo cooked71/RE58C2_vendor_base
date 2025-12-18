@@ -3515,11 +3515,12 @@ PRODUCT_COPY_FILES += \
 # DUAL LOCATION COPY - SYSTEM (PRIMARY) + SYSTEM_EXT (FALLBACK)
 # =============================================
 
-# SYSTEM LOCATION (Primary - where classloader looks first)
+# SYSTEM LOCATION (Primary - where classloader looks first)telephony-common.jar
 PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/uni-telephony-common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-framework.jar \
-    vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.unisoc.sdk.common.jar 
+    vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.unisoc.sdk.common.jar \
+    vendor/realme/RE58C2/proprietary/system_ext/framework/telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/telephony-common.jar 
 
 # SYSTEM_EXT LOCATION (Fallback - original location)
 PRODUCT_COPY_FILES += \
@@ -3597,11 +3598,11 @@ PRODUCT_COPY_FILES += \
     com.unisoc.sdk.common
 
 # Add to system framework jars
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     framework-unisoc-ims
 
 # Add to bootclasspath
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     framework-unisoc-ims
 
 # ESSENTIAL PACKAGES - MINIMAL ACTIVE CONFIGURATION
