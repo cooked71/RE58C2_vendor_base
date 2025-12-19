@@ -3500,8 +3500,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/radio_interactor_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc_ims_common.jar \
-    vendor/realme/RE58C2/proprietary/system/framework/ims-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/ims-common.jar \
-    vendor/realme/RE58C2/proprietary/system/framework/telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/telephony-common.jar
+    vendor/realme/RE58C2/proprietary/system/framework/ims-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/ims-common.jar 
+    #vendor/realme/RE58C2/proprietary/system/framework/telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/telephony-common.jar
 
 
 PRODUCT_COPY_FILES += \
