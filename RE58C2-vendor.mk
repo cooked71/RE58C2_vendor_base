@@ -3606,6 +3606,12 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_BOOT_JARS += \
     framework-unisoc-ims
 
+ # Add the MODULE NAMES to the bootclasspath
+PRODUCT_BOOT_JARS += \
+    unisoc-ims-common \
+    radio-interactor-common \
+    unisoc-framework
+
 # ESSENTIAL PACKAGES - MINIMAL ACTIVE CONFIGURATION
 PRODUCT_PACKAGES += \
     LogManager \
