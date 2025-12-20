@@ -914,52 +914,59 @@ android_app_import {
     product_specific: true,
 }
 
-prebuilt_art {
+# For unisoc-ims-common
+java_import {
     name: "unisoc-ims-common",
+    installable: true,
     prefer: true,
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
     
-    # Source JAR file
-    srcs: ["proprietary/system/framework/unisoc_ims_common.jar"],
+    // REQUIRED: Generate dex at build time
+    compile_dex: true,
     
-    # Pre-compiled DEX files (.vdex)
-    vdex: {
-        arm: {
-            srcs: ["proprietary/system/framework/boot-unisoc_ims_common.vdex"],
-        },
-        arm64: {
-            srcs: ["proprietary/system/framework/boot-unisoc_ims_common.vdex"],
-        },
+    // REQUIRED: Enable dex optimization
+    dex_preopt: {
+        enabled: true,
     },
+    
+    // OPTIONAL but helpful: Use pre-compiled profile
+    // profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
 }
 
-prebuilt_art {
+# For radio-interactor-common
+java_import {
     name: "radio-interactor-common",
+    installable: true,
     prefer: true,
+    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
     
-    srcs: ["proprietary/system/framework/radio_interactor_common.jar"],
-    
-    vdex: {
-        arm: {
-            srcs: ["proprietary/system/framework/boot-radio_interactor_common.vdex"],
-        },
-        arm64: {
-            srcs: ["proprietary/system/framework/boot-radio_interactor_common.vdex"],
-        },
+    // REQUIRED for bootclasspath:
+    compile_dex: true,
+    dex_preopt: {
+        enabled: true,
     },
-
 }
+
+# For unisoc-framework (system_ext)
 java_import {
     name: "unisoc-framework",
     installable: true,
     prefer: true,
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    
+    // REQUIRED:
     compile_dex: true,
+    dex_preopt: {
+        enabled: true,
+    },
+    
+    # For system_ext partition
     system_ext_specific: true,
 }
 
