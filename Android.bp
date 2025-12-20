@@ -537,12 +537,12 @@ dex_import {
 }
 
 // System_ext framework jars (in /system_ext/framework/)
-dex_import {
-    name: "unisoc-framework",
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    owner: "realme",
-    soc_specific: true,
-}
+// dex_import {
+//    name: "unisoc-framework",
+//    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+//    owner: "realme",
+//    soc_specific: true,
+//}
 
 dex_import {
     name: "com.unisoc.sdk.common",
