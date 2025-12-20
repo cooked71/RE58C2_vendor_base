@@ -935,7 +935,7 @@ java_import {
     // profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
 }
 
-# For radio-interactor-common
+// For radio-interactor-common
 java_import {
     name: "radio-interactor-common",
     installable: true,
@@ -951,7 +951,7 @@ java_import {
     },
 }
 
-# For unisoc-framework (system_ext)
+// For unisoc-framework (system_ext)
 java_import {
     name: "unisoc-framework",
     installable: true,
