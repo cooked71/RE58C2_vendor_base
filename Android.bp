@@ -914,37 +914,32 @@ android_app_import {
     product_specific: true,
 }
 
-// For unisoc_ims_common.jar
-prebuilt_java_library {
+java_import {
     name: "unisoc-ims-common",
     installable: true,
-    prefer: true, // Prefer this prebuilt over any source module with the same name
+    prefer: true,
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
-    srcs: ["proprietary/system/framework/unisoc_ims_common.jar"],
+    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
 }
-
-// For radio_interactor_common.jar
-prebuilt_java_library {
+java_import {
     name: "radio-interactor-common",
     installable: true,
     prefer: true,
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
-    srcs: ["proprietary/system/framework/radio_interactor_common.jar"],
+    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
 }
-
-// For unisoc-framework.jar (in system_ext)
-prebuilt_java_library {
+java_import {
     name: "unisoc-framework",
     installable: true,
     prefer: true,
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
-    srcs: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
     compile_dex: true,
+    system_ext_specific: true,
 }
-
 
 
 //     java_library {
