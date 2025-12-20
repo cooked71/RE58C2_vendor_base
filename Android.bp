@@ -966,7 +966,7 @@ java_import {
         enabled: true,
     },
     
-    # For system_ext partition
+    // For system_ext partition
     system_ext_specific: true,
 }
 
