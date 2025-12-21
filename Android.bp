@@ -922,8 +922,8 @@ dex_import {
     visibility: ["//vendor/realme/RE58C2"],
     apex_available: ["//apex_available:platform"],
     
-    # Optional: If you have dex profiles
-    # profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
+    // Optional: If you have dex profiles
+    //profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
 }
 
 dex_import {
