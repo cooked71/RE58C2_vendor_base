@@ -3467,7 +3467,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/etc/permissions/com.unisoc.emergency.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/permissions/com.unisoc.emergency.xml
 
 # Unisoc Framework JARs
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.unisoc.sdk.common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/smartlink_sdk.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/smartlink_sdk.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unipnp-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unipnp-framework.jar \
@@ -3496,7 +3496,7 @@ PRODUCT_COPY_FILES += \
 # PRODUCT_COPY_FILES - FRAMEWORK JARS (EXISTING)
 # =============================================
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/radio_interactor_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/radio_interactor_common.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc_ims_common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc_ims_common.jar \
@@ -3504,7 +3504,7 @@ PRODUCT_COPY_FILES += \
     #vendor/realme/RE58C2/proprietary/system/framework/telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/telephony-common.jar
 
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system/framework/unisoc-services.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-services.jar 
 
 PRODUCT_COPY_FILES += \
@@ -3517,14 +3517,14 @@ PRODUCT_COPY_FILES += \
 # =============================================
 
 # SYSTEM LOCATION (Primary - where classloader looks first)telephony-common.jar
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/uni-telephony-common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/unisoc-framework.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.unisoc.sdk.common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/telephony-common.jar 
 
 # SYSTEM_EXT LOCATION (Fallback - original location)
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/realme/RE58C2/proprietary/system_ext/framework/uni-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uni-telephony-common.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/unisoc-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/unisoc-framework.jar \
     vendor/realme/RE58C2/proprietary/system_ext/framework/com.unisoc.sdk.common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.unisoc.sdk.common.jar 
