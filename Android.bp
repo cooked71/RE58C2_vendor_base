@@ -937,14 +937,14 @@ dex_import {
 
 
 // For unisoc-framework (system_ext)
-java_import {
-    name: "unisoc-framework",
-    installable: true,
-    prefer: true,
-    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
-    visibility: ["//vendor/realme/RE58C2"],
-    apex_available: ["//apex_available:platform"],
-    
+// java_import {
+//    name: "unisoc-framework",
+//    installable: true,
+//    prefer: true,
+//    jars: ["proprietary/system_ext/framework/unisoc-framework.jar"],
+//    visibility: ["//vendor/realme/RE58C2"],
+//    apex_available: ["//apex_available:platform"],
+ //   
     // REQUIRED:
  //   compile_dex: true,
  //   dex_preopt: {
