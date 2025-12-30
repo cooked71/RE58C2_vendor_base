@@ -914,7 +914,7 @@ android_app_import {
     product_specific: true,
 }
 
-dex_import {
+// dex_import {
 //     name: "unisoc-ims-common",
 //     installable: true,
 //     prefer: true,
