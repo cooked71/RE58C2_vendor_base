@@ -3607,7 +3607,7 @@ PRODUCT_COPY_FILES += \
     framework-unisoc-ims
 
  # Add the MODULE NAMES to the bootclasspath
-PRODUCT_BOOT_JARS += \
+# PRODUCT_BOOT_JARS += \
     unisoc-ims-common \
     radio-interactor-common \
     unisoc-framework
