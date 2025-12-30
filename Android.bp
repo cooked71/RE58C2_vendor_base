@@ -915,25 +915,26 @@ android_app_import {
 }
 
 dex_import {
-    name: "unisoc-ims-common",
-    installable: true,
-    prefer: true,
-    jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
-    visibility: ["//vendor/realme/RE58C2"],
-    apex_available: ["//apex_available:platform"],
+//     name: "unisoc-ims-common",
+//     installable: true,
+//     prefer: true,
+//     jars: ["proprietary/system/framework/unisoc_ims_common.jar"],
+//     visibility: ["//vendor/realme/RE58C2"],
+//     apex_available: ["//apex_available:platform"],
     
-    // Optional: If you have dex profiles
-    //profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
-}
+//     // Optional: If you have dex profiles
+//     //profile: "proprietary/system/framework/boot-unisoc_ims_common.vdex",
+// }
 
-dex_import {
-    name: "radio-interactor-common",
-    installable: true,
-    prefer: true,
-    jars: ["proprietary/system/framework/radio_interactor_common.jar"],
-    visibility: ["//vendor/realme/RE58C2"],
-    apex_available: ["//apex_available:platform"],
-}
+// dex_import {
+//     name: "radio-interactor-common",
+//     installable: true,
+//     prefer: true,
+//     jars: ["proprietary/system/framework/radio_interactor_common.jar"],
+//     visibility: ["//vendor/realme/RE58C2"],
+//     apex_available: ["//apex_available:platform"],
+// }
+
 
 // For unisoc-framework (system_ext)
 java_import {
@@ -945,14 +946,14 @@ java_import {
     apex_available: ["//apex_available:platform"],
     
     // REQUIRED:
-    compile_dex: true,
-    dex_preopt: {
-        enabled: true,
-    },
+ //   compile_dex: true,
+ //   dex_preopt: {
+ //       enabled: true,
+ //   },
     
     // For system_ext partition
-    system_ext_specific: true,
-}
+//    system_ext_specific: true,
+// }
 
 //     java_library {
 //     name: "framework-unisoc-ims",
