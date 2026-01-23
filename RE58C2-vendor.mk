@@ -3697,8 +3697,9 @@ PRODUCT_PACKAGES += \
 # =============================================
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service \
-    power.stats-default \
     vendor-power-default
+# power.stats-default \
+
 
 # =============================================
 # SENSORS & INPUT
